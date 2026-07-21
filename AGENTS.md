@@ -96,16 +96,6 @@ Located in `PSD-technology-classification-framework/TCpackage/resources/`:
 
 ---
 
-## Planned Experiments (from AGENTS.md)
-
-1. **Discriminability:** ANOVA F-statistic per feature across 6 technologies
-2. **Cross-Sensor Stability:** Coefficient of Variation (CV) per feature across sensors
-3. **Feature Redundancy:** Pearson correlation heatmap between 33 features
-4. **Feature Importance:** Random Forest + permutation importance
-5. **Cross-Sensor Generalization:** Leave-one-sensor-out cross-validation
-
----
-
 ## Environment
 
 - Python packages: `tsfresh==0.21.2`, `pandas==2.2.2`, `numpy==1.26.4`, `tensorflow` (for classification)
