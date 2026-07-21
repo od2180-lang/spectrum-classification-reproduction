@@ -16,7 +16,7 @@
 
 **Data:** 232 .npy files, 40+ sensors across Europe, 6 technologies (DAB, DVB-T, FM, GSM, LTE, TETRA)
 
-**Pipeline:** Load pre-trained weights → Extract features → Classify → Confusion Matrix
+**Pipeline:** Load pre-trained weights → Extract features → Scale features → Classify → Confusion Matrix
 
 ---
 
@@ -69,6 +69,41 @@ sum_values, variance, variation_coefficient
 
 ---
 
+## Feature Scaling (COMPLETED)
+
+### Script: `scale_features.py`
+Scales the 33 extracted features using the authors' pre-trained MinMaxScaler.
+
+**What it does:**
+1. Loads the pre-trained scaler from `PSD-technology-classification-framework/TCpackage/resources/scaler/_AE16_LSTM_Scaler_.save`
+2. Reads `features_33.csv`
+3. Applies `scaler.transform()` on all 33 feature columns (never `.fit()`)
+4. Saves `features_33_scaled.csv`
+
+**Key details:**
+- Scaler type: `MinMaxScaler` (scikit-learn 1.0.2), feature_range=(0, 1)
+- Fitted on the original training set's 33 features
+- Some scaled values fall outside [0, 1] (range: -1.26 to 1.80) — this is normal because our data extrapolates beyond training min/max. The downstream models (AutoEncoder, LSTM) handle this fine
+- Feature column order matches `TechClass.py:86-128` exactly
+
+**Output:** `features_33_scaled.csv`
+- 11,400 rows, 40 columns (7 metadata + 33 scaled features)
+- 0 NaN, 0 Inf values
+
+### Authors' scaling approach (TechClass.py)
+The authors scale each time segment independently:
+```python
+# TechClass.py:199-223 (inference_data)
+X_test = self.scaler.transform(X)        # X is (50, 33)
+X_test_encode = encoder.predict(X_test)  # 33 → 16
+X_test_encode = np.reshape(X_test_encode, (-1, 16, 1))  # LSTM input
+test_Y_i_hat = model.predict(X_test)     # classify
+```
+- All 50 rows per file are scaled, encoded, and classified independently
+- Final label determined by entropy-based aggregation (`scoreEntropyPred`, line 155)
+
+---
+
 ## Pre-trained Models (from authors)
 
 Located in `PSD-technology-classification-framework/TCpackage/resources/`:
@@ -92,7 +127,9 @@ Located in `PSD-technology-classification-framework/TCpackage/resources/`:
 | Original NaN cleanup | `PSD-technology-classification-framework/TCpackage/TechClass.py:140` (`refine_df()`) |
 | Original DEF_NUM_TIMESEGMENTS | `PSD-technology-classification-framework/TCpackage/TechClass.py:240` (= 50) |
 | Our feature extraction script | `extract_features_all.py` |
-| Our output | `features_33.csv` |
+| Our feature scaling script | `scale_features.py` |
+| Our output (unscaled) | `features_33.csv` |
+| Our output (scaled) | `features_33_scaled.csv` |
 
 ---
 
