@@ -104,6 +104,32 @@ test_Y_i_hat = model.predict(X_test)     # classify
 
 ---
 
+## AutoEncoder Encoding (COMPLETED)
+
+### Script: `encode_features.py`
+Encodes the 33 scaled features into 16 compressed features using the authors' pre-trained AutoEncoder.
+
+**What it does:**
+1. Builds the autoencoder architecture (encoder: 33→64→32→16, decoder: 16→32→64→33)
+2. Loads pre-trained weights from `saved-model-49-0.0002.hdf5`
+3. Extracts only the encoder half (discards decoder)
+4. Reads `features_33_scaled.csv`
+5. Applies `encoder.predict()` on all 11,400 rows
+6. Saves `features_16.csv`
+
+**Key details:**
+- Encoder architecture matches `TechClass.py:46-50` exactly
+- Activation function: `relu` (line 78)
+- Each row's 33 features → 16 compressed features (independent processing)
+- No NaN or Inf values in output
+
+**Output:** `features_16.csv`
+- 11,400 rows, 23 columns (7 metadata + 16 encoded features)
+- Feature columns named `enc_0` through `enc_15`
+- Value range: 0.0 to 4.87 (relu activation output)
+
+---
+
 ## Pre-trained Models (from authors)
 
 Located in `PSD-technology-classification-framework/TCpackage/resources/`:
@@ -128,8 +154,10 @@ Located in `PSD-technology-classification-framework/TCpackage/resources/`:
 | Original DEF_NUM_TIMESEGMENTS | `PSD-technology-classification-framework/TCpackage/TechClass.py:240` (= 50) |
 | Our feature extraction script | `extract_features_all.py` |
 | Our feature scaling script | `scale_features.py` |
+| Our autoencoder encoding script | `encode_features.py` |
 | Our output (unscaled) | `features_33.csv` |
 | Our output (scaled) | `features_33_scaled.csv` |
+| Our output (encoded) | `features_16.csv` |
 
 ---
 
