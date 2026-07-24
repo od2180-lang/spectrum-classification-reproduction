@@ -24,12 +24,13 @@
 Stage 1: Transmission Detection (TDS)
   Full-band .npy capture (thousands of bins)
   → Detect individual transmissions
-  → Output: PSD segments (~215 bins each)
+  → Output: PSD segments (variable width B)
 
 Stage 2: Feature Extraction (hopping strategy)
   PSD segment (variable width B)
   → Trim to first 50 time segments
-  → Crop to center 200 bins (if B ≥ 200) or pad with zeros (if B < 200)
+  → WIDTH GATE checks ORIGINAL width (before cropping)
+  → Crop to center 200 bins (if B ≥ 200)
   → Extract 33 tsfresh features per row
   → Output: 50 × 33 feature matrix
 
@@ -46,7 +47,8 @@ Stage 3: Classification
 
 ## Data
 
-- **Location:** `spectrum_bands/<SensorName>/<Date>/SpectrumBands_<start>_<end>_<tech>_<country>_<start>_<end>.npy`
+- **Raw transmissions:** `detected_transmissions/<filename>.npy` + `<filename>.csv` (metadata with SNR)
+- **Cropped transmissions:** `hopping_results/<filename>.npy` (already cropped to 200 bins — DO NOT use for authors' pipeline)
 - **Format:** 2D numpy arrays (time_segments × frequency_bins), float64, values in dB
 - **Technologies:** DAB, DVB-T, FM, GSM, LTE, TETRA
 
@@ -62,16 +64,6 @@ Stage 3: Classification
 | smoothing | True | TDTCApp.py:153 |
 | k (prominence) | 0.2 | TDTCApp.py:153 |
 | widthApplicable | True | TDTCApp.py:153 |
-
----
-
-## Hopping Strategy (from paper Section VII-B-3)
-
-1. Detect transmission → PSD segment of width B bins
-2. Trim to first **50 time segments**
-3. If B ≥ 200: crop to **center 200 bins** (`extract2MHz`, TechClass.py:170)
-4. If B < 200: **pad with zeros** to reach 200 bins
-5. Result: every input is **50 × 200**
 
 ---
 
@@ -109,39 +101,163 @@ Note: Paper says 32 features but code has 33. Pre-trained models expect 33.
 ## Implementation Steps
 
 ### Step 1: `run_tds.py` — Detect Transmissions
-- Load each full-band .npy file
-- Run `ChannelDetector.tx_detection_funct()` with paper's parameters
-- Cut out each detected transmission → individual PSD segments
-- Save each as separate .npy file
+- Load each full-band .npy file from `spectrum_bands/`
+- Compute noise level from data
+- Run energy detection + peak finding to identify individual transmissions
+- Cut out each detected transmission → individual .npy files
+- Save to `detected_transmissions/` with companion .csv metadata (SNR, frequency)
+- Output: 2490 raw transmissions
 
 ### Step 2: `apply_hopping.py` — Normalize to 2 MHz
 - For each detected transmission:
   - Trim to first 50 time segments
   - If width ≥ 200: crop to center 200 bins
   - If width < 200: pad with zeros to 200 bins
-- Save as `psd_segments.csv` (metadata + 200 bin values)
+- Output: `hopping_results/` (cropped to 200 bins)
 
 ### Step 3: `extract_features_psd.py` — Extract Features
 - For each PSD segment (50 × 200), extract 33 tsfresh features per row
 - Clean NaN/inf values
-- Save as `features_33.csv`
+- Output: `features_33.csv` (2490 rows × 1650 columns: 50 segments × 33 features)
 
-### Step 4: `scale_features.py` — Scale (reuse existing)
-- Input: `features_33.csv`
-- Output: `features_33_scaled.csv`
+---
 
-### Step 5: `encode_features.py` — Encode (reuse existing)
-- Input: `features_33_scaled.csv`
-- Output: `features_16.csv`
+## Accuracy Results
 
-### Step 6: `classify_lstm.py` — Classify (reuse existing)
-- Input: `features_16.csv`
-- Output: `lstm_predictions.csv`
+### Authors' Pre-trained Models (replicate_figure11.py)
+Uses raw transmissions from `detected_transmissions/` + authors' scaler, encoder, LSTM weights.
 
-### Step 7: Evaluate
-- Generate confusion matrix
-- Report per-class accuracy
-- Compare with paper's Figure 11
+| Metric | Value |
+|--------|-------|
+| **Overall Accuracy (entropy gate)** | **93.09%** (256/275 known predictions) |
+| **Overall Accuracy (no gate)** | 75.90% (378/498 known predictions) |
+| **Paper's reported accuracy** | **94.25%** |
+| **Unknown filtered by entropy gate** | 1301/1576 transmissions |
+| **Unknown filtered (no gate, SNR≤3)** | 1098/1576 transmissions |
+
+**Gap to paper:** -1.16% (93.09% vs 94.25%). Likely due to entropy calculation discrepancy (see below).
+
+### Train-from-Scratch (classify_lstm.py)
+Trains own LSTM from scratch (no pre-trained models). Uses `hopping_results/` cropped data.
+
+| Metric | Value |
+|--------|-------|
+| **Overall Accuracy (entropy gate)** | **95.24%** (140/147 confident) |
+| **Overall Accuracy (no gate)** | 75.90% (378/498) |
+| **Paper's reported accuracy** | **94.25%** |
+
+**Note:** Train-from-scratch beats the paper but only on 147 confident predictions (91% filtered as unknown). Without gate, drops to 75.90%.
+
+### Per-Class Accuracy (Authors' Pre-trained, with Entropy Gate)
+
+| Technology | Correct | Total | Accuracy | Paper |
+|------------|---------|-------|----------|-------|
+| DAB | 3 | 3 | 100.00% | 98% |
+| DVB-T | 0 | 2 | 0.00% | 93% |
+| FM | 251 | 251 | 100.00% | 97% |
+| GSM | 15 | 19 | 78.95% | 98% |
+| LTE | 1 | 1 | 100.00% | 98% |
+| TETRA | 2 | 20 | 10.00% | 97% |
+
+*Note: list_entropy accumulation bug causes 81% of files (1280/1576) to be filtered as unknown, leaving only 296 confident predictions. DVB-T and TETRA have very few confident predictions (2 and 20 respectively), making per-class accuracy unreliable.*
+
+---
+
+## Authors' Exact Pipeline (TechClass.py)
+
+The full classification flow for each transmission:
+
+```
+inference_trx_labels() → for each .npy file:
+  1. Load raw .npy → (50+, width)
+  2. Trim to 50 time segments → (50, width)
+  3. Read SNR from .csv sidecar file
+  4. Determine technology from frequency range
+  5. WIDTH GATE checks ORIGINAL width (see below)
+  6. If passes gate → loadAndPredict()
+
+loadAndPredict():
+  7. Load raw .npy AGAIN → (50+, width)
+  8. Trim to 50 time segments → (50, width)
+  9. If width ≥ 200: crop to CENTER 200 bins (extract2MHz)
+  10. Extract 33 features → (50, 33)
+  11. Clean NaN/inf (refine_df: fill skewness, kurtosis, mean_second_derivative_central with 0)
+  12. Remove id_sensor column
+  13. → inference_data()
+
+inference_data():
+  14. Scale with authors' MinMaxScaler → (50, 33)
+  15. Encode with authors' AutoEncoder encoder → (50, 16)
+  16. Reshape each segment to (16, 1) → (50, 16, 1)
+  17. Classify each segment with authors' LSTM → (50, 6) probabilities
+  18. If SNR > 3: entropy gate + majority vote
+  19. If SNR ≤ 3: force label 6 (unknown)
+  20. Return final label
+```
+
+---
+
+## Width Gates (CRITICAL — checks ORIGINAL width before cropping)
+
+From TechClass.py:285-312:
+
+| Technology | Width Condition | SNR Condition |
+|------------|----------------|---------------|
+| DAB | 120 ≤ width ≤ 240 | SNR ≥ 1.70 |
+| DVB-T | width ≥ 400 | none |
+| FM | no gate | none |
+| GSM | 14 ≤ width ≤ 35 | none |
+| LTE | width > 700 | none |
+| TETRA | width < 10 | none |
+
+**CRITICAL: Width gate checks the RAW transmission width, NOT the cropped width.**
+
+Our data widths (raw from `detected_transmissions/`):
+- DAB: 9-1400 bins (82/371 pass gate)
+- DVB-T: 9-6417 bins (81/310 pass gate)
+- FM: 7-1219 bins (1046/1046 pass — no gate)
+- GSM: 11-642 bins (168/327 pass gate)
+- LTE: 12-3371 bins (99/165 pass gate)
+- TETRA: 5-177 bins (100/271 pass gate)
+
+---
+
+## Entropy Calculation Discrepancy (CRITICAL)
+
+**Issue 1: Different math**
+
+Authors' code (TechClass.py:155-160):
+```python
+def scoreEntropyPred(self, test_Y_i_hat, treshold_alpha):
+    for elem in test_Y_i_hat:           # for each of 50 segment predictions
+        h = self.calc_entropy(elem)      # entropy of ONE segment's 6-class probs
+        self.list_entropy.append(h)
+    entropy_avg = np.mean(self.list_entropy)  # average of 50 individual entropies
+```
+
+Our code (WRONG):
+```python
+prob_mean = np.mean(file_probs, axis=0)   # average the 50 predictions FIRST
+entropy = -np.sum(prob_mean * np.log2(prob_mean + 1e-10))  # entropy of the average
+```
+
+**These are mathematically different.** The authors compute 50 individual entropies and average them. We compute the mean probability vector and take its entropy.
+
+**Issue 2: self.list_entropy accumulates across files**
+
+```python
+class TechnologyClassifClass:
+    def __init__(self):
+        self.list_entropy = []   # initialized ONCE (line 33)
+
+    def scoreEntropyPred(self, test_Y_i_hat, treshold_alpha):
+        for elem in test_Y_i_hat:
+            h = self.calc_entropy(elem)
+            self.list_entropy.append(h)    # APPENDS, never cleared
+        entropy_avg = np.mean(self.list_entropy)
+```
+
+`self.list_entropy` is NEVER cleared between files. Entropies from ALL previous files accumulate, making the gate increasingly aggressive as more files are processed. This is likely a bug, but it's what the code does.
 
 ---
 
@@ -154,10 +270,11 @@ Note: Paper says 32 features but code has 33. Pre-trained models expect 33.
 | Store transmissions | `PSD-technology-classification-framework/TDPackage/Utils/chDetUtils.py:194-240` |
 | Noise level computation | `PSD-technology-classification-framework/TDPackage/Utils/chDetUtils.py:99-120` |
 | Feature extraction | `PSD-technology-classification-framework/TCpackage/TechClass.py:86-128` |
-| 2MHz crop | `PSD-technology-classification-framework/TCpackage/TechClass.py:170-197` |
+| 2MHz crop (center) | `PSD-technology-classification-framework/TCpackage/TechClass.py:170-197` |
 | NaN cleanup | `PSD-technology-classification-framework/TCpackage/TechClass.py:140-146` |
 | LSTM architecture | `PSD-technology-classification-framework/TCpackage/TechClass.py:63-73` |
 | Entropy gate | `PSD-technology-classification-framework/TCpackage/TechClass.py:148-168` |
+| Width gates | `PSD-technology-classification-framework/TCpackage/TechClass.py:285-312` |
 | Classification labels | `PSD-technology-classification-framework/TCpackage/TechClass.py:30` |
 
 ---
