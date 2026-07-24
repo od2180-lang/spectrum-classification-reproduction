@@ -125,17 +125,21 @@ Note: Paper says 32 features but code has 33. Pre-trained models expect 33.
 ## Accuracy Results
 
 ### Authors' Pre-trained Models (replicate_figure11.py)
-Uses raw transmissions from `detected_transmissions/` + authors' scaler, encoder, LSTM weights.
+Uses authors' exact `TechClass.py` code (3 minimal patches: dead import, model path, lr deprecation).
 
 | Metric | Value |
 |--------|-------|
-| **Overall Accuracy (entropy gate)** | **93.09%** (256/275 known predictions) |
-| **Overall Accuracy (no gate)** | 75.90% (378/498 known predictions) |
+| **Overall Accuracy (entropy gate)** | **68.42%** (221/323 known predictions) |
+| **Unknown filtered by entropy gate** | 2167/2490 (87%) |
 | **Paper's reported accuracy** | **94.25%** |
-| **Unknown filtered by entropy gate** | 1301/1576 transmissions |
-| **Unknown filtered (no gate, SNR≤3)** | 1098/1576 transmissions |
 
-**Gap to paper:** -1.16% (93.09% vs 94.25%). Likely due to entropy calculation discrepancy (see below).
+**Gap to paper:** -25.83%. Caused by:
+1. Buggy frequency ID — DVB-T/GSM/LTE always become `'unkn'` (`*1e6` on both sides)
+2. `list_entropy` accumulation — gate filters 87% as unknown, compounds across files
+3. `h + 0.7` on low-SNR path — inflates accumulated entropy further
+4. LSTM bias toward DAB — model predicts DAB for most things (217/323 predictions are DAB)
+
+**Note:** This IS the authors' exact code. The gap likely means they ran on a different/smaller test set where the accumulation bug didn't compound as severely.
 
 ### Train-from-Scratch (classify_lstm.py)
 Trains own LSTM from scratch (no pre-trained models). Uses `hopping_results/` cropped data.
@@ -152,14 +156,14 @@ Trains own LSTM from scratch (no pre-trained models). Uses `hopping_results/` cr
 
 | Technology | Correct | Total | Accuracy | Paper |
 |------------|---------|-------|----------|-------|
-| DAB | 3 | 3 | 100.00% | 98% |
-| DVB-T | 0 | 2 | 0.00% | 93% |
-| FM | 251 | 251 | 100.00% | 97% |
-| GSM | 15 | 19 | 78.95% | 98% |
-| LTE | 1 | 1 | 100.00% | 98% |
-| TETRA | 2 | 20 | 10.00% | 97% |
+| DAB | 217 | 217 | 100.00% | 98% |
+| DVB-T | 0 | 1 | 0.00% | 93% |
+| FM | 4 | 6 | 66.67% | 97% |
+| GSM | 0 | 0 | - | 98% |
+| LTE | 0 | 0 | - | 98% |
+| TETRA | 0 | 99 | 0.00% | 97% |
 
-*Note: list_entropy accumulation bug causes 81% of files (1280/1576) to be filtered as unknown, leaving only 296 confident predictions. DVB-T and TETRA have very few confident predictions (2 and 20 respectively), making per-class accuracy unreliable.*
+*Note: list_entropy accumulation bug causes 87% of files (2167/2490) to be filtered as unknown, leaving only 323 confident predictions. DVB-T/GSM/LTE always become 'unkn' due to buggy frequency identification. TETRA files pass the gate but LSTM predicts DAB for all of them.*
 
 ---
 
