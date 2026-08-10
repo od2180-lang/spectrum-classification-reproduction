@@ -1,0 +1,225 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785426282.508322  387269 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+E0000 00:00:1785426285.931918  387269 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+  FM: 41 files
+  TETRA: 38 files
+  LTE: 41 files
+  GSM: 46 files
+  DAB: 32 files
+  DVBT: 34 files
+Loading models...
+Models loaded
+
+
+============================================================
+Processing FM files... (41 files)
+============================================================
+  File 1/41: SpectrumBands_80_110_fm_Swis_80_110.npy (80-110MHz)
+    TX 1 (12 bins): fm ent=0.337 +
+    TX 2 (41 bins): gsm ent=0.043 -
+    TX 3 (35 bins): fm ent=0.514 +
+    TX 4 (16 bins): gsm ent=0.523 -
+    TX 5 (15 bins): fm ent=0.137 +
+    TX 6 (20 bins): fm ent=0.328 +
+    TX 7 (10 bins): fm ent=0.155 +
+    TX 8 (11 bins): fm ent=0.078 +
+    TX 9 (32 bins): gsm ent=0.443 -
+    TX 10 (36 bins): gsm ent=0.041 -
+    TX 11 (14 bins): fm ent=0.140 +
+    TX 12 (17 bins): fm ent=0.099 +
+    TX 13 (23 bins): gsm ent=0.043 -
+    TX 14 (24 bins): fm ent=0.292 +
+    TX 15 (19 bins): fm ent=0.465 +
+    TX 16 (16 bins): fm ent=0.294 +
+    TX 17 (97 bins): dab ent=0.079 -
+    TX 18 (43 bins): gsm ent=0.042 -
+    TX 19 (28 bins): fm ent=0.078 +
+    TX 20 (21 bins): gsm ent=0.468 -
+    TX 21 (11 bins): fm ent=0.348 +
+    TX 22 (15 bins): gsm ent=0.520 -
+    TX 23 (15 bins): fm ent=0.195 +
+    TX 24 (28 bins): gsm ent=0.133 -
+    TX 25 (24 bins): fm ent=0.496 +
+    TX 26 (11 bins): fm ent=0.135 +
+    TX 27 (11 bins): fm ent=0.107 +
+    TX 28 (34 bins): gsm ent=0.047 -
+  File 2/41: SpectrumBands_85_91_fm_bu_85_91.npy (85-91MHz)
+    TX 1 (20 bins): fm ent=0.128 +
+    TX 2 (16 bins): fm ent=0.083 +
+    TX 3 (23 bins): fm ent=0.501 +
+    TX 4 (19 bins): fm ent=0.095 +
+    TX 5 (18 bins): fm ent=0.120 +
+    TX 6 (11 bins): fm ent=0.118 +
+  File 3/41: SpectrumBands_87_102_fm_Ita_87_102.npy (87-102MHz)
+    TX 1 (14 bins): fm ent=0.350 +
+    TX 2 (13 bins): fm ent=0.239 +
+    TX 3 (16 bins): fm ent=0.060 +
+    TX 4 (12 bins): fm ent=0.298 +
+    TX 5 (11 bins): fm ent=0.417 +
+    TX 6 (12 bins): fm ent=0.297 +
+    TX 7 (14 bins): fm ent=0.423 +
+    TX 8 (27 bins): gsm ent=0.263 -
+    TX 9 (16 bins): fm ent=0.193 +
+    TX 10 (10 bins): fm ent=0.098 +
+    TX 11 (24 bins): gsm ent=0.139 -
+    TX 12 (14 bins): fm ent=0.214 +
+    TX 13 (26 bins): gsm ent=0.337 -
+    TX 14 (12 bins): fm ent=0.482 +
+    TX 15 (14 bins): fm ent=0.131 +
+    TX 16 (14 bins): fm ent=0.119 +
+    TX 17 (17 bins): fm ent=0.267 +
+    TX 18 (11 bins): fm ent=0.322 +
+    TX 19 (10 bins): fm ent=0.123 +
+    TX 20 (11 bins): fm ent=0.216 +
+    TX 21 (10 bins): fm ent=0.084 +
+  File 4/41: SpectrumBands_86_110_fm_usa_86_110.npy (86-110MHz)
+    TX 1 (12 bins): fm ent=0.099 +
+    TX 2 (26 bins): gsm ent=0.041 -
+    TX 3 (25 bins): gsm ent=0.042 -
+    TX 4 (19 bins): fm ent=0.244 +
+    TX 5 (11 bins): gsm ent=0.412 -
+    TX 6 (16 bins): fm ent=0.169 +
+    TX 7 (21 bins): fm ent=0.157 +
+    TX 8 (13 bins): fm ent=0.415 +
+    TX 9 (15 bins): gsm ent=0.420 -
+    TX 10 (16 bins): fm ent=0.224 +
+    TX 11 (21 bins): fm ent=0.311 +
+    TX 12 (18 bins): fm ent=0.264 +
+    TX 13 (14 bins): gsm ent=0.531 -
+    TX 14 (23 bins): fm ent=0.225 +
+    TX 15 (11 bins): fm ent=0.184 +
+    TX 16 (11 bins): fm ent=0.263 +
+  File 5/41: SpectrumBands_93_128_fm_slv_93_128.npy (93-128MHz)
+    TX 1 (20 bins): gsm ent=0.121 -
+    TX 2 (16 bins): gsm ent=0.135 -
+    TX 3 (32 bins): gsm ent=0.061 -
+    TX 4 (26 bins): gsm ent=0.220 -
+    TX 5 (12 bins): fm ent=0.234 +
+    TX 6 (10 bins): fm ent=0.071 +
+    TX 7 (10 bins): fm ent=0.079 +
+    TX 8 (11 bins): fm ent=0.178 +
+    TX 9 (20 bins): gsm ent=0.119 -
+    TX 10 (11 bins): gsm ent=0.167 -
+    TX 11 (12 bins): fm ent=0.248 +
+    TX 12 (11 bins): fm ent=0.180 +
+  File 6/41: SpectrumBands_100_120_fm_Switz_100_120.npy (100-120MHz)
+    TX 1 (13 bins): fm ent=0.125 +
+    TX 2 (14 bins): fm ent=0.402 +
+    TX 3 (17 bins): fm ent=0.196 +
+    TX 4 (25 bins): gsm ent=0.044 -
+    TX 5 (13 bins): gsm ent=0.467 -
+    TX 6 (16 bins): fm ent=0.362 +
+    TX 7 (12 bins): fm ent=0.303 +
+  File 7/41: SpectrumBands_87_92_fm_ne_87_92.npy (87-92MHz)
+    TX 1 (11 bins): fm ent=0.301 +
+    TX 2 (11 bins): fm ent=0.202 +
+    TX 3 (13 bins): gsm ent=0.577 -
+    TX 4 (16 bins): fm ent=0.501 +
+    TX 5 (14 bins): fm ent=0.258 +
+  File 8/41: SpectrumBands_100_106_fm_ge_100_106.npy (100-106MHz)
+    TX 1 (12 bins): fm ent=0.312 +
+    TX 2 (20 bins): fm ent=0.268 +
+    TX 3 (18 bins): gsm ent=0.519 -
+    TX 4 (20 bins): fm ent=0.119 +
+    TX 5 (24 bins): fm ent=0.077 +
+    TX 6 (20 bins): fm ent=0.085 +
+    TX 7 (14 bins): fm ent=0.133 +
+  File 9/41: SpectrumBands_87_102_fm_ger_87_102.npy (87-102MHz)
+    TX 1 (13 bins): fm ent=0.121 +
+    TX 2 (12 bins): fm ent=0.111 +
+    TX 3 (20 bins): fm ent=0.184 +
+    TX 4 (14 bins): fm ent=0.267 +
+    TX 5 (12 bins): fm ent=0.165 +
+    TX 6 (13 bins): fm ent=0.392 +
+    TX 7 (13 bins): fm ent=0.099 +
+  File 10/41: SpectrumBands_94_120_fm_Swis_94_120.npy (94-120MHz)
+    TX 1 (10 bins): fm ent=0.101 +
+    TX 2 (10 bins): fm ent=0.175 +
+    TX 3 (22 bins): gsm ent=0.044 -
+    TX 4 (15 bins): gsm ent=0.058 -
+    TX 5 (11 bins): fm ent=0.362 +
+    TX 6 (12 bins): gsm ent=0.466 -
+    TX 7 (13 bins): gsm ent=0.286 -
+    TX 8 (29 bins): fm ent=0.105 +
+    TX 9 (28 bins): fm ent=0.072 +
+    TX 10 (12 bins): fm ent=0.576 +
+    TX 11 (12 bins): fm ent=0.275 +
+  File 11/41: SpectrumBands_98_107_fm_ita_98_107.npy (98-107MHz)
+    TX 1 (13 bins): fm ent=0.223 +
+    TX 2 (23 bins): fm ent=0.076 +
+    TX 3 (25 bins): fm ent=0.152 +
+    TX 4 (25 bins): fm ent=0.174 +
+    TX 5 (47 bins): gsm ent=0.115 -
+    TX 6 (44 bins): gsm ent=0.175 -
+    TX 7 (12 bins): gsm ent=0.531 -
+    TX 8 (38 bins): gsm ent=0.045 -
+    TX 9 (41 bins): fm ent=0.556 +
+    TX 10 (11 bins): fm ent=0.232 +
+    TX 11 (17 bins): fm ent=0.229 +
+    TX 12 (17 bins): fm ent=0.198 +
+    TX 13 (11 bins): fm ent=0.141 +
+    TX 14 (17 bins): fm ent=0.063 +
+    TX 15 (23 bins): fm ent=0.099 +
+    TX 16 (16 bins): fm ent=0.090 +
+    TX 17 (21 bins): fm ent=0.071 +
+    TX 18 (20 bins): fm ent=0.065 +
+    TX 19 (11 bins): fm ent=0.176 +
+    TX 20 (17 bins): fm ent=0.299 +
+    TX 21 (16 bins): fm ent=0.150 +
+    TX 22 (11 bins): fm ent=0.191 +
+  File 12/41: SpectrumBands_99_107_fm_cz_99_107.npy (99-107MHz)
+    TX 1 (13 bins): fm ent=0.246 +
+    TX 2 (14 bins): fm ent=0.183 +
+    TX 3 (15 bins): fm ent=0.391 +
+    TX 4 (11 bins): fm ent=0.383 +
+  File 13/41: SpectrumBands_85_110_fm_czk_85_110.npy (85-110MHz)
+    TX 1 (103 bins): dab ent=0.062 -
+    TX 2 (61 bins): gsm ent=0.045 -
+    TX 3 (31 bins): gsm ent=0.041 -
+    TX 4 (16 bins): gsm ent=0.041 -
+    TX 5 (20 bins): gsm ent=0.041 -
+    TX 6 (13 bins): fm ent=0.379 +
+  File 14/41: SpectrumBands_70_90_fm_Jap_207_228.npy (70-90MHz)
+    TX 1 (20 bins): fm ent=0.386 +
+    TX 2 (25 bins): fm ent=0.414 +
+    TX 3 (14 bins): gsm ent=0.349 -
+    TX 4 (11 bins): fm ent=0.224 +
+    TX 5 (18 bins): fm ent=0.136 +
+    TX 6 (11 bins): fm ent=0.382 +
+    TX 7 (11 bins): fm ent=0.411 +
+    TX 8 (21 bins): fm ent=0.528 +
+    TX 9 (20 bins): gsm ent=0.589 -
+  File 15/41: SpectrumBands_85_120_fm_Ger_85_120.npy (85-120MHz)
+    TX 1 (318 bins): lte ent=0.175 -
+    TX 2 (118 bins): dab ent=0.051 -
+    TX 3 (15 bins): fm ent=0.396 +
+    TX 4 (16 bins): fm ent=0.422 +
+    TX 5 (13 bins): fm ent=0.075 +
+    TX 6 (11 bins): fm ent=0.198 +
+    TX 7 (14 bins): fm ent=0.068 +
+    TX 8 (12 bins): fm ent=0.075 +
+    TX 9 (14 bins): fm ent=0.072 +
+  File 16/41: SpectrumBands_86_110_fm_usa_86_110.npy (86-110MHz)
+    TX 1 (194 bins): unkn ent=0.771 -
+    TX 2 (13 bins): fm ent=0.072 +
+    TX 3 (13 bins): fm ent=0.504 +
+    TX 4 (13 bins): fm ent=0.423 +
+    TX 5 (17 bins): fm ent=0.081 +
+    TX 6 (14 bins): fm ent=0.085 +
+    TX 7 (17 bins): fm ent=0.153 +
+    TX 8 (18 bins): fm ent=0.464 +
+    TX 9 (18 bins): fm ent=0.132 +
+    TX 10 (16 bins): fm ent=0.171 +
+    TX 11 (21 bins): fm ent=0.128 +
+    TX 12 (15 bins): fm ent=0.209 +
+    TX 13 (19 bins): fm ent=0.299 +
+    TX 14 (20 bins): fm ent=0.138 +
+    TX 15 (17 bins): fm ent=0.505 +
+    TX 16 (14 bins): fm ent=0.252 +
+    TX 17 (23 bins): fm ent=0.068 +
+    TX 18 (26 bins): fm ent=0.411 +
+    TX 19 (22 bins): fm ent=0.096 +
+  File 17/41: SpectrumBands_100_110_fm_po_100_110.npy (100-110MHz)
+    TX 1 (11 bins): fm ent=0.411 +
+    TX 2 (13 bins): fm ent=0.399 +

@@ -1,0 +1,16 @@
+# Large directories
+dataset/
+PSD-technology-classification-framework/
+.ipynb_checkpoints/
+__pycache__/
+
+# Large files
+project_gpu.tar.gz
+*.hdf5
+*.h5
+*.pkl
+*.joblib
+
+# Keep the derived results (txt and png) but note they might be large
+# We'll check and decide in the commit step
+

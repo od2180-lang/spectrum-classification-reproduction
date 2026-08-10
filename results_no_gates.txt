@@ -1,0 +1,40 @@
+NO-GATES CLASSIFICATION RESULTS (True Generalization)
+=======================================================
+
+Per-Transmission Accuracy:
+  FM:      68.1%  (493/724)
+  TETRA:    3.2%  (6/188)
+  LTE:     13.5%  (18/133)
+  GSM:     95.5%  (300/314)
+  DAB:     26.4%  (68/258)
+  DVB-T:   11.7%  (35/299)
+
+Overall: 47.3% (916/1916 valid detections)
+
+Per-File Accuracy (Majority Vote):
+  FM:      82.9%  (34/41 files)
+  TETRA:    0.0%  (0/38 files)
+  LTE:      2.4%  (1/41 files)
+  GSM:     87.0%  (40/46 files)
+  DAB:     37.5%  (12/32 files)
+  DVB-T:    5.9%  (2/34 files)
+
+Total detections: 1919
+Total classified (no errors): 1916
+Classification rate: 99.8%
+
+Confusion Matrix (Expected → Predicted):
+               dab    dvbt      fm     gsm     lte   tetra
+       dab      72      16      19     171       9       0
+      dvbt      36      38       3     253      43       0
+        fm       7       1     493     220       3       0
+       gsm       7       2       3     300       2       0
+       lte      10       3       0      31      15       0
+     tetra       1       0     121      30       1       2
+
+Errors (3 total):
+  too_narrow: 2
+  crop_fail: 1
+
+Run: python run_no_gates.py
+Date: Generated from full pipeline run on all 199 files (6 technologies)

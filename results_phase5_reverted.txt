@@ -1,0 +1,2533 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785660231.325895  874222 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+E0000 00:00:1785660234.512668  874222 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+  FM: 41 files
+  TETRA: 38 files
+  LTE: 41 files
+  GSM: 46 files
+  DAB: 32 files
+  DVBT: 34 files
+Loading models...
+Models loaded
+
+
+============================================================
+Processing FM files... (41 files)
+============================================================
+  File 1/41: SpectrumBands_80_110_fm_Swis_80_110.npy (80-110MHz)
+    TX 1 (16 bins): unkn ent=0.812 -
+    TX 2 (45 bins): gsm ent=0.044 -
+    TX 3 (38 bins): unkn ent=0.908 -
+    TX 4 (19 bins): gsm ent=0.659 -
+    TX 5 (28 bins): gsm ent=0.373 -
+    TX 6 (10 bins): fm ent=0.304 +
+    TX 7 (11 bins): fm ent=0.082 +
+    TX 8 (41 bins): gsm ent=0.041 -
+    TX 9 (16 bins): fm ent=0.378 +
+    TX 10 (13 bins): gsm ent=0.597 -
+    TX 11 (19 bins): fm ent=0.255 +
+    TX 12 (28 bins): unkn ent=0.956 -
+    TX 13 (19 bins): unkn ent=0.928 -
+    TX 14 (19 bins): unkn ent=0.988 -
+    TX 15 (13 bins): fm ent=0.171 +
+    TX 16 (47 bins): gsm ent=0.042 -
+    TX 17 (31 bins): fm ent=0.217 +
+    TX 18 (25 bins): gsm ent=0.282 -
+    TX 19 (15 bins): gsm ent=0.639 -
+    TX 20 (17 bins): unkn ent=0.825 -
+    TX 21 (18 bins): fm ent=0.642 +
+    TX 22 (33 bins): gsm ent=0.048 -
+    TX 23 (29 bins): gsm ent=0.536 -
+    TX 24 (11 bins): fm ent=0.347 +
+    TX 25 (11 bins): fm ent=0.121 +
+    TX 26 (36 bins): gsm ent=0.045 -
+  File 2/41: SpectrumBands_85_91_fm_bu_85_91.npy (85-91MHz)
+    TX 1 (21 bins): fm ent=0.156 +
+    TX 2 (18 bins): fm ent=0.120 +
+    TX 3 (25 bins): unkn ent=0.799 -
+    TX 4 (24 bins): fm ent=0.272 +
+    TX 5 (20 bins): fm ent=0.163 +
+    TX 6 (11 bins): fm ent=0.158 +
+  File 3/41: SpectrumBands_87_102_fm_Ita_87_102.npy (87-102MHz)
+    TX 1 (14 bins): unkn ent=0.798 -
+    TX 2 (15 bins): unkn ent=0.805 -
+    TX 3 (18 bins): fm ent=0.067 +
+    TX 4 (14 bins): unkn ent=0.918 -
+    TX 5 (13 bins): unkn ent=0.924 -
+    TX 6 (13 bins): unkn ent=0.850 -
+    TX 7 (16 bins): unkn ent=0.994 -
+    TX 8 (28 bins): gsm ent=0.431 -
+    TX 9 (18 bins): fm ent=0.539 +
+    TX 10 (14 bins): unkn ent=1.006 -
+    TX 11 (10 bins): fm ent=0.210 +
+    TX 12 (26 bins): gsm ent=0.087 -
+    TX 13 (15 bins): fm ent=0.674 +
+    TX 14 (30 bins): gsm ent=0.133 -
+    TX 15 (12 bins): unkn ent=0.876 -
+    TX 16 (12 bins): unkn ent=0.907 -
+    TX 17 (12 bins): unkn ent=0.854 -
+    TX 18 (13 bins): unkn ent=0.999 -
+    TX 19 (14 bins): fm ent=0.163 +
+    TX 20 (16 bins): fm ent=0.604 +
+    TX 21 (17 bins): fm ent=0.548 +
+    TX 22 (13 bins): unkn ent=0.987 -
+    TX 23 (10 bins): fm ent=0.239 +
+    TX 24 (11 bins): fm ent=0.548 +
+    TX 25 (10 bins): fm ent=0.088 +
+  File 4/41: SpectrumBands_86_110_fm_usa_86_110.npy (86-110MHz)
+    TX 1 (13 bins): fm ent=0.298 +
+    TX 2 (29 bins): gsm ent=0.041 -
+    TX 3 (21 bins): fm ent=0.482 +
+    TX 4 (11 bins): unkn ent=0.891 -
+    TX 5 (13 bins): gsm ent=0.294 -
+    TX 6 (14 bins): unkn ent=0.814 -
+    TX 7 (14 bins): unkn ent=0.807 -
+    TX 8 (15 bins): gsm ent=0.074 -
+    TX 9 (18 bins): fm ent=0.450 +
+    TX 10 (22 bins): fm ent=0.277 +
+    TX 11 (15 bins): unkn ent=0.936 -
+    TX 12 (17 bins): unkn ent=0.879 -
+    TX 13 (17 bins): fm ent=0.291 +
+    TX 14 (23 bins): unkn ent=0.932 -
+    TX 15 (12 bins): unkn ent=0.747 -
+    TX 16 (20 bins): unkn ent=0.735 -
+    TX 17 (17 bins): gsm ent=0.603 -
+    TX 18 (24 bins): fm ent=0.661 +
+    TX 19 (13 bins): fm ent=0.562 +
+    TX 20 (11 bins): unkn ent=0.778 -
+    TX 21 (13 bins): unkn ent=1.005 -
+  File 5/41: SpectrumBands_93_128_fm_slv_93_128.npy (93-128MHz)
+    TX 1 (41 bins): gsm ent=0.041 -
+    TX 2 (10 bins): fm ent=0.350 +
+    TX 3 (12 bins): fm ent=0.669 +
+    TX 4 (10 bins): fm ent=0.073 +
+    TX 5 (10 bins): fm ent=0.111 +
+    TX 6 (12 bins): unkn ent=1.015 -
+    TX 7 (11 bins): unkn ent=1.264 -
+    TX 8 (11 bins): unkn ent=1.136 -
+    TX 9 (12 bins): fm ent=0.085 +
+    TX 10 (22 bins): gsm ent=0.137 -
+    TX 11 (12 bins): unkn ent=0.945 -
+    TX 12 (15 bins): gsm ent=0.610 -
+    TX 13 (20 bins): gsm ent=0.143 -
+    TX 14 (24 bins): gsm ent=0.042 -
+    TX 15 (29 bins): gsm ent=0.041 -
+    TX 16 (13 bins): unkn ent=0.834 -
+    TX 17 (14 bins): unkn ent=0.895 -
+  File 6/41: SpectrumBands_100_120_fm_Switz_100_120.npy (100-120MHz)
+    TX 1 (15 bins): fm ent=0.327 +
+    TX 2 (16 bins): unkn ent=0.971 -
+    TX 3 (16 bins): gsm ent=0.159 -
+    TX 4 (12 bins): unkn ent=0.934 -
+    TX 5 (15 bins): gsm ent=0.587 -
+    TX 6 (27 bins): gsm ent=0.042 -
+    TX 7 (12 bins): unkn ent=0.986 -
+    TX 8 (11 bins): unkn ent=0.966 -
+    TX 9 (13 bins): unkn ent=1.026 -
+    TX 10 (18 bins): unkn ent=0.989 -
+    TX 11 (14 bins): unkn ent=0.990 -
+    TX 12 (17 bins): gsm ent=0.270 -
+  File 7/41: SpectrumBands_87_92_fm_ne_87_92.npy (87-92MHz)
+    TX 1 (13 bins): unkn ent=0.917 -
+    TX 2 (13 bins): fm ent=0.663 +
+    TX 3 (17 bins): gsm ent=0.154 -
+    TX 4 (18 bins): unkn ent=0.998 -
+    TX 5 (16 bins): unkn ent=0.796 -
+  File 8/41: SpectrumBands_100_106_fm_ge_100_106.npy (100-106MHz)
+    TX 1 (16 bins): unkn ent=0.971 -
+    TX 2 (22 bins): fm ent=0.413 +
+    TX 3 (14 bins): gsm ent=0.237 -
+    TX 4 (21 bins): gsm ent=0.659 -
+    TX 5 (22 bins): fm ent=0.187 +
+    TX 6 (25 bins): fm ent=0.118 +
+    TX 7 (12 bins): fm ent=0.487 +
+    TX 8 (22 bins): fm ent=0.111 +
+    TX 9 (16 bins): fm ent=0.285 +
+  File 9/41: SpectrumBands_87_102_fm_ger_87_102.npy (87-102MHz)
+    TX 1 (11 bins): fm ent=0.508 +
+    TX 2 (11 bins): fm ent=0.596 +
+    TX 3 (12 bins): fm ent=0.639 +
+    TX 4 (11 bins): fm ent=0.522 +
+    TX 5 (14 bins): fm ent=0.309 +
+    TX 6 (14 bins): fm ent=0.559 +
+    TX 7 (21 bins): fm ent=0.348 +
+    TX 8 (16 bins): unkn ent=0.856 -
+    TX 9 (12 bins): unkn ent=0.998 -
+    TX 10 (12 bins): fm ent=0.191 +
+  File 10/41: SpectrumBands_94_120_fm_Swis_94_120.npy (94-120MHz)
+    TX 1 (10 bins): fm ent=0.111 +
+    TX 2 (10 bins): fm ent=0.312 +
+    TX 3 (19 bins): gsm ent=0.043 -
+    TX 4 (14 bins): gsm ent=0.591 -
+    TX 5 (12 bins): gsm ent=0.355 -
+    TX 6 (14 bins): unkn ent=0.880 -
+    TX 7 (16 bins): gsm ent=0.058 -
+    TX 8 (32 bins): fm ent=0.248 +
+    TX 9 (13 bins): gsm ent=0.337 -
+    TX 10 (13 bins): gsm ent=0.424 -
+    TX 11 (30 bins): fm ent=0.155 +
+    TX 12 (12 bins): unkn ent=1.024 -
+    TX 13 (13 bins): unkn ent=0.985 -
+    TX 14 (14 bins): unkn ent=0.934 -
+  File 11/41: SpectrumBands_98_107_fm_ita_98_107.npy (98-107MHz)
+    TX 1 (15 bins): fm ent=0.603 +
+    TX 2 (25 bins): fm ent=0.080 +
+    TX 3 (26 bins): fm ent=0.219 +
+    TX 4 (26 bins): fm ent=0.493 +
+    TX 5 (11 bins): fm ent=0.245 +
+    TX 6 (61 bins): unkn ent=0.794 -
+    TX 7 (45 bins): gsm ent=0.202 -
+    TX 8 (58 bins): gsm ent=0.178 -
+    TX 9 (13 bins): fm ent=0.597 +
+    TX 10 (18 bins): fm ent=0.400 +
+    TX 11 (21 bins): fm ent=0.609 +
+    TX 12 (13 bins): fm ent=0.270 +
+    TX 13 (19 bins): fm ent=0.064 +
+    TX 14 (23 bins): fm ent=0.109 +
+    TX 15 (17 bins): fm ent=0.105 +
+    TX 16 (22 bins): fm ent=0.092 +
+    TX 17 (22 bins): fm ent=0.074 +
+    TX 18 (11 bins): fm ent=0.359 +
+    TX 19 (26 bins): unkn ent=0.939 -
+    TX 20 (18 bins): fm ent=0.304 +
+    TX 21 (13 bins): fm ent=0.504 +
+  File 12/41: SpectrumBands_99_107_fm_cz_99_107.npy (99-107MHz)
+    TX 1 (15 bins): unkn ent=0.905 -
+    TX 2 (16 bins): fm ent=0.674 +
+    TX 3 (14 bins): fm ent=0.539 +
+    TX 4 (13 bins): unkn ent=0.854 -
+  File 13/41: SpectrumBands_85_110_fm_czk_85_110.npy (85-110MHz)
+    TX 1 (257 bins): dvbt ent=0.208 -
+    TX 2 (18 bins): gsm ent=0.041 -
+    TX 3 (17 bins): gsm ent=0.041 -
+    TX 4 (27 bins): gsm ent=0.041 -
+    TX 5 (17 bins): gsm ent=0.041 -
+    TX 6 (34 bins): gsm ent=0.041 -
+    TX 7 (15 bins): gsm ent=0.041 -
+    TX 8 (14 bins): unkn ent=0.820 -
+    TX 9 (11 bins): unkn ent=0.730 -
+    TX 10 (12 bins): unkn ent=0.932 -
+    TX 11 (12 bins): unkn ent=0.865 -
+  File 14/41: SpectrumBands_70_90_fm_Jap_207_228.npy (70-90MHz)
+    TX 1 (21 bins): unkn ent=0.718 -
+    TX 2 (27 bins): unkn ent=0.986 -
+    TX 3 (16 bins): gsm ent=0.507 -
+    TX 4 (12 bins): unkn ent=0.746 -
+    TX 5 (20 bins): fm ent=0.408 +
+    TX 6 (13 bins): unkn ent=0.902 -
+    TX 7 (14 bins): unkn ent=0.879 -
+    TX 8 (11 bins): gsm ent=0.079 -
+    TX 9 (12 bins): gsm ent=0.043 -
+    TX 10 (16 bins): gsm ent=0.041 -
+    TX 11 (48 bins): gsm ent=0.041 -
+    TX 12 (42 bins): gsm ent=0.041 -
+    TX 13 (23 bins): gsm ent=0.636 -
+  File 15/41: SpectrumBands_85_120_fm_Ger_85_120.npy (85-120MHz)
+    TX 1 (534 bins): lte ent=0.253 -
+    TX 2 (130 bins): dab ent=0.082 -
+    TX 3 (11 bins): gsm ent=0.334 -
+    TX 4 (12 bins): gsm ent=0.154 -
+    TX 5 (11 bins): unkn ent=0.949 -
+    TX 6 (15 bins): fm ent=0.121 +
+    TX 7 (11 bins): fm ent=0.322 +
+    TX 8 (14 bins): fm ent=0.073 +
+    TX 9 (14 bins): fm ent=0.079 +
+  File 16/41: SpectrumBands_86_110_fm_usa_86_110.npy (86-110MHz)
+    TX 1 (206 bins): unkn ent=0.743 -
+    TX 2 (15 bins): fm ent=0.099 +
+    TX 3 (24 bins): unkn ent=0.879 -
+    TX 4 (18 bins): unkn ent=0.981 -
+    TX 5 (18 bins): fm ent=0.110 +
+    TX 6 (16 bins): fm ent=0.104 +
+    TX 7 (21 bins): fm ent=0.159 +
+    TX 8 (15 bins): unkn ent=0.980 -
+    TX 9 (25 bins): unkn ent=1.001 -
+    TX 10 (20 bins): fm ent=0.371 +
+    TX 11 (11 bins): unkn ent=0.985 -
+    TX 12 (19 bins): fm ent=0.160 +
+    TX 13 (14 bins): unkn ent=0.992 -
+    TX 14 (14 bins): unkn ent=0.947 -
+    TX 15 (20 bins): fm ent=0.139 +
+    TX 16 (12 bins): unkn ent=0.960 -
+    TX 17 (12 bins): fm ent=0.553 +
+    TX 18 (17 bins): fm ent=0.408 +
+    TX 19 (21 bins): fm ent=0.570 +
+    TX 20 (22 bins): fm ent=0.213 +
+    TX 21 (21 bins): unkn ent=0.967 -
+    TX 22 (16 bins): fm ent=0.456 +
+    TX 23 (23 bins): fm ent=0.071 +
+    TX 24 (19 bins): unkn ent=0.893 -
+    TX 25 (44 bins): gsm ent=0.654 -
+    TX 26 (24 bins): fm ent=0.130 +
+  File 17/41: SpectrumBands_100_110_fm_po_100_110.npy (100-110MHz)
+    TX 1 (13 bins): unkn ent=1.007 -
+    TX 2 (13 bins): fm ent=0.610 +
+    TX 3 (17 bins): fm ent=0.143 +
+    TX 4 (16 bins): fm ent=0.101 +
+    TX 5 (19 bins): fm ent=0.298 +
+    TX 6 (12 bins): unkn ent=0.911 -
+    TX 7 (12 bins): unkn ent=1.003 -
+  File 18/41: SpectrumBands_86_110_fm_usa_86_110.npy (86-110MHz)
+    TX 1 (12 bins): gsm ent=0.518 -
+    TX 2 (14 bins): fm ent=0.209 +
+    TX 3 (16 bins): unkn ent=0.981 -
+    TX 4 (14 bins): gsm ent=0.293 -
+    TX 5 (18 bins): unkn ent=0.945 -
+    TX 6 (17 bins): gsm ent=0.084 -
+    TX 7 (10 bins): fm ent=0.193 +
+    TX 8 (15 bins): gsm ent=0.548 -
+    TX 9 (20 bins): gsm ent=0.137 -
+    TX 10 (19 bins): fm ent=0.070 +
+    TX 11 (14 bins): unkn ent=0.933 -
+    TX 12 (13 bins): unkn ent=0.925 -
+    TX 13 (16 bins): gsm ent=0.082 -
+    TX 14 (17 bins): gsm ent=0.232 -
+    TX 15 (21 bins): gsm ent=0.044 -
+    TX 16 (17 bins): gsm ent=0.248 -
+    TX 17 (19 bins): gsm ent=0.045 -
+    TX 18 (17 bins): gsm ent=0.250 -
+    TX 19 (16 bins): gsm ent=0.173 -
+    TX 20 (15 bins): gsm ent=0.400 -
+    TX 21 (14 bins): gsm ent=0.479 -
+  File 19/41: SpectrumBands_80_120_fm_Ita_80_120.npy (80-120MHz)
+    TX 1 (11 bins): unkn ent=0.888 -
+    TX 2 (30 bins): unkn ent=0.769 -
+    TX 3 (64 bins): unkn ent=1.357 -
+    TX 4 (32 bins): unkn ent=0.827 -
+    TX 5 (25 bins): unkn ent=0.825 -
+    TX 6 (30 bins): unkn ent=0.761 -
+    TX 7 (36 bins): gsm ent=0.138 -
+    TX 8 (21 bins): gsm ent=0.213 -
+    TX 9 (18 bins): gsm ent=0.596 -
+    TX 10 (27 bins): gsm ent=0.318 -
+    TX 11 (16 bins): gsm ent=0.664 -
+    TX 12 (55 bins): unkn ent=0.991 -
+    TX 13 (30 bins): fm ent=0.344 +
+    TX 14 (21 bins): fm ent=0.226 +
+    TX 15 (23 bins): unkn ent=0.837 -
+    TX 16 (18 bins): gsm ent=0.265 -
+    TX 17 (29 bins): unkn ent=1.001 -
+    TX 18 (13 bins): gsm ent=0.506 -
+    TX 19 (11 bins): fm ent=0.277 +
+    TX 20 (21 bins): fm ent=0.464 +
+    TX 21 (35 bins): unkn ent=1.039 -
+    TX 22 (22 bins): fm ent=0.060 +
+    TX 23 (20 bins): fm ent=0.334 +
+    TX 24 (13 bins): fm ent=0.508 +
+    TX 25 (29 bins): gsm ent=0.175 -
+    TX 26 (31 bins): gsm ent=0.468 -
+    TX 27 (31 bins): gsm ent=0.245 -
+    TX 28 (27 bins): unkn ent=0.840 -
+    TX 29 (54 bins): unkn ent=0.839 -
+    TX 30 (28 bins): unkn ent=0.741 -
+    TX 31 (22 bins): unkn ent=0.793 -
+    TX 32 (15 bins): fm ent=0.088 +
+    TX 33 (14 bins): unkn ent=0.886 -
+    TX 34 (25 bins): fm ent=0.133 +
+    TX 35 (26 bins): unkn ent=0.975 -
+    TX 36 (18 bins): unkn ent=0.888 -
+    TX 37 (156 bins): unkn ent=1.517 -
+    TX 38 (19 bins): gsm ent=0.138 -
+    TX 39 (17 bins): unkn ent=0.989 -
+    TX 40 (21 bins): fm ent=0.071 +
+    TX 41 (42 bins): gsm ent=0.331 -
+    TX 42 (82 bins): unkn ent=0.840 -
+    TX 43 (78 bins): dab ent=0.465 -
+    TX 44 (53 bins): unkn ent=1.331 -
+    TX 45 (58 bins): unkn ent=1.366 -
+    TX 46 (29 bins): fm ent=0.482 +
+    TX 47 (63 bins): unkn ent=1.329 -
+    TX 48 (29 bins): fm ent=0.652 +
+    TX 49 (17 bins): fm ent=0.334 +
+    TX 50 (24 bins): unkn ent=1.001 -
+    TX 51 (30 bins): unkn ent=0.885 -
+  File 20/41: SpectrumBands_80_120_fm_Pol_80_120.npy (80-120MHz)
+    TX 1 (362 bins): dvbt ent=0.076 -
+    TX 2 (409 bins): unkn ent=1.467 -
+    TX 3 (13 bins): gsm ent=0.247 -
+    TX 4 (37 bins): gsm ent=0.041 -
+    TX 5 (14 bins): unkn ent=0.842 -
+    TX 6 (18 bins): unkn ent=0.889 -
+    TX 7 (13 bins): unkn ent=0.913 -
+    TX 8 (12 bins): unkn ent=1.040 -
+    TX 9 (11 bins): unkn ent=1.061 -
+    TX 10 (11 bins): unkn ent=1.060 -
+    TX 11 (16 bins): unkn ent=0.999 -
+    TX 12 (12 bins): unkn ent=0.977 -
+    TX 13 (14 bins): unkn ent=0.997 -
+    TX 14 (16 bins): fm ent=0.366 +
+    TX 15 (16 bins): fm ent=0.272 +
+    TX 16 (13 bins): fm ent=0.541 +
+    TX 17 (11 bins): fm ent=0.695 +
+    TX 18 (13 bins): fm ent=0.111 +
+    TX 19 (13 bins): fm ent=0.184 +
+    TX 20 (13 bins): unkn ent=0.865 -
+    TX 21 (19 bins): fm ent=0.212 +
+    TX 22 (14 bins): unkn ent=0.886 -
+    TX 23 (24 bins): gsm ent=0.042 -
+    TX 24 (12 bins): unkn ent=0.764 -
+    TX 25 (19 bins): unkn ent=0.984 -
+    TX 26 (21 bins): gsm ent=0.569 -
+    TX 27 (14 bins): unkn ent=0.765 -
+    TX 28 (16 bins): gsm ent=0.068 -
+    TX 29 (20 bins): unkn ent=0.988 -
+    TX 30 (22 bins): gsm ent=0.210 -
+    TX 31 (11 bins): unkn ent=1.187 -
+    TX 32 (15 bins): unkn ent=0.799 -
+    TX 33 (15 bins): gsm ent=0.662 -
+    TX 34 (20 bins): fm ent=0.575 +
+    TX 35 (17 bins): fm ent=0.293 +
+  File 21/41: SpectrumBands_90_120_fm_rus_90_120.npy (90-120MHz)
+    TX 1 (12 bins): fm ent=0.590 +
+    TX 2 (14 bins): unkn ent=0.833 -
+    TX 3 (16 bins): fm ent=0.281 +
+    TX 4 (15 bins): gsm ent=0.506 -
+    TX 5 (22 bins): unkn ent=0.729 -
+    TX 6 (23 bins): gsm ent=0.107 -
+    TX 7 (22 bins): gsm ent=0.099 -
+    TX 8 (25 bins): unkn ent=0.998 -
+    TX 9 (22 bins): gsm ent=0.055 -
+    TX 10 (28 bins): gsm ent=0.042 -
+    TX 11 (28 bins): gsm ent=0.148 -
+    TX 12 (28 bins): gsm ent=0.067 -
+    TX 13 (24 bins): gsm ent=0.149 -
+  File 22/41: SpectrumBands_85_120_fm_Swis_85_120.npy (85-120MHz)
+    TX 1 (36 bins): fm ent=0.675 +
+    TX 2 (30 bins): fm ent=0.555 +
+    TX 3 (13 bins): unkn ent=0.821 -
+    TX 4 (11 bins): unkn ent=1.046 -
+    TX 5 (17 bins): fm ent=0.467 +
+    TX 6 (15 bins): fm ent=0.183 +
+    TX 7 (27 bins): fm ent=0.387 +
+    TX 8 (29 bins): gsm ent=0.265 -
+    TX 9 (15 bins): fm ent=0.300 +
+    TX 10 (12 bins): gsm ent=0.552 -
+    TX 11 (98 bins): dab ent=0.099 -
+    TX 12 (117 bins): dab ent=0.055 -
+    TX 13 (13 bins): fm ent=0.318 +
+    TX 14 (54 bins): gsm ent=0.054 -
+    TX 15 (109 bins): dab ent=0.056 -
+    TX 16 (26 bins): gsm ent=0.061 -
+    TX 17 (17 bins): gsm ent=0.295 -
+  File 23/41: SpectrumBands_85_120_fm_Esp_85_120.npy (85-120MHz)
+    TX 1 (10 bins): fm ent=0.174 +
+    TX 2 (11 bins): fm ent=0.468 +
+    TX 3 (10 bins): fm ent=0.085 +
+    TX 4 (11 bins): fm ent=0.319 +
+    TX 5 (12 bins): fm ent=0.198 +
+    TX 6 (13 bins): fm ent=0.575 +
+    TX 7 (11 bins): fm ent=0.106 +
+    TX 8 (10 bins): fm ent=0.475 +
+    TX 9 (11 bins): fm ent=0.432 +
+    TX 10 (10 bins): fm ent=0.437 +
+    TX 11 (10 bins): fm ent=0.316 +
+    TX 12 (10 bins): fm ent=0.254 +
+    TX 13 (10 bins): fm ent=0.324 +
+    TX 14 (11 bins): fm ent=0.211 +
+    TX 15 (10 bins): fm ent=0.237 +
+    TX 16 (11 bins): fm ent=0.230 +
+    TX 17 (10 bins): unkn ent=0.799 -
+  File 24/41: SpectrumBands_85_120_fm_Esp_85_120.npy (85-120MHz)
+    TX 1 (10 bins): fm ent=0.616 +
+    TX 2 (10 bins): fm ent=0.094 +
+    TX 3 (10 bins): fm ent=0.379 +
+    TX 4 (10 bins): fm ent=0.139 +
+    TX 5 (10 bins): fm ent=0.221 +
+    TX 6 (10 bins): fm ent=0.123 +
+    TX 7 (10 bins): fm ent=0.098 +
+    TX 8 (10 bins): fm ent=0.269 +
+    TX 9 (10 bins): fm ent=0.572 +
+    TX 10 (10 bins): fm ent=0.126 +
+    TX 11 (12 bins): fm ent=0.498 +
+    TX 12 (12 bins): unkn ent=0.764 -
+    TX 13 (10 bins): fm ent=0.433 +
+    TX 14 (10 bins): fm ent=0.139 +
+    TX 15 (10 bins): fm ent=0.173 +
+    TX 16 (12 bins): unkn ent=0.849 -
+    TX 17 (10 bins): fm ent=0.201 +
+    TX 18 (10 bins): fm ent=0.123 +
+    TX 19 (10 bins): fm ent=0.104 +
+    TX 20 (12 bins): unkn ent=1.094 -
+  File 25/41: SpectrumBands_100_120_fm_Switz_100_120.npy (100-120MHz)
+    TX 1 (20 bins): fm ent=0.482 +
+  File 26/41: SpectrumBands_87_102_fm_Switz_87_102.npy (87-102MHz)
+    TX 1 (27 bins): unkn ent=0.902 -
+    TX 2 (20 bins): fm ent=0.542 +
+    TX 3 (13 bins): fm ent=0.239 +
+  File 27/41: SpectrumBands_91_111_fm_Cro_91_111.npy (91-111MHz)
+    TX 1 (12 bins): fm ent=0.360 +
+    TX 2 (19 bins): gsm ent=0.441 -
+    TX 3 (26 bins): fm ent=0.104 +
+    TX 4 (21 bins): fm ent=0.091 +
+    TX 5 (43 bins): gsm ent=0.055 -
+    TX 6 (22 bins): gsm ent=0.183 -
+    TX 7 (11 bins): fm ent=0.221 +
+    TX 8 (13 bins): unkn ent=0.947 -
+    TX 9 (19 bins): gsm ent=0.085 -
+    TX 10 (24 bins): fm ent=0.482 +
+    TX 11 (14 bins): fm ent=0.126 +
+    TX 12 (21 bins): fm ent=0.069 +
+    TX 13 (17 bins): unkn ent=0.728 -
+    TX 14 (14 bins): fm ent=0.606 +
+    TX 15 (23 bins): fm ent=0.074 +
+    TX 16 (26 bins): gsm ent=0.042 -
+    TX 17 (11 bins): fm ent=0.140 +
+    TX 18 (13 bins): gsm ent=0.532 -
+    TX 19 (22 bins): gsm ent=0.056 -
+    TX 20 (19 bins): gsm ent=0.355 -
+    TX 21 (25 bins): gsm ent=0.042 -
+    TX 22 (23 bins): fm ent=0.069 +
+    TX 23 (25 bins): gsm ent=0.567 -
+  File 28/41: SpectrumBands_85_120_fm_alcorcon_85_120.npy (85-120MHz)
+    TX 1 (22 bins): fm ent=0.253 +
+    TX 2 (27 bins): unkn ent=0.991 -
+    TX 3 (25 bins): unkn ent=1.002 -
+    TX 4 (26 bins): fm ent=0.651 +
+    TX 5 (17 bins): gsm ent=0.520 -
+    TX 6 (40 bins): gsm ent=0.042 -
+    TX 7 (10 bins): fm ent=0.102 +
+    TX 8 (28 bins): fm ent=0.096 +
+    TX 9 (30 bins): fm ent=0.564 +
+    TX 10 (11 bins): fm ent=0.212 +
+    TX 11 (10 bins): fm ent=0.167 +
+    TX 12 (10 bins): fm ent=0.327 +
+    TX 13 (42 bins): gsm ent=0.043 -
+    TX 14 (25 bins): gsm ent=0.042 -
+    TX 15 (10 bins): fm ent=0.373 +
+    TX 16 (10 bins): fm ent=0.382 +
+    TX 17 (12 bins): fm ent=0.616 +
+    TX 18 (10 bins): fm ent=0.133 +
+    TX 19 (10 bins): fm ent=0.212 +
+    TX 20 (10 bins): fm ent=0.210 +
+    TX 21 (10 bins): fm ent=0.308 +
+  File 29/41: alcorcon_Feb_2_21SpectrumBands_85_120_fm_alcorcon_85_120.npy (85-120MHz)
+    TX 1 (24 bins): fm ent=0.673 +
+    TX 2 (28 bins): unkn ent=0.967 -
+    TX 3 (25 bins): unkn ent=0.979 -
+    TX 4 (10 bins): fm ent=0.210 +
+    TX 5 (10 bins): unkn ent=0.703 -
+    TX 6 (10 bins): fm ent=0.185 +
+    TX 7 (11 bins): fm ent=0.387 +
+    TX 8 (10 bins): fm ent=0.102 +
+    TX 9 (42 bins): gsm ent=0.042 -
+    TX 10 (24 bins): gsm ent=0.042 -
+    TX 11 (10 bins): fm ent=0.323 +
+    TX 12 (10 bins): fm ent=0.141 +
+    TX 13 (10 bins): fm ent=0.381 +
+    TX 14 (13 bins): unkn ent=0.969 -
+    TX 15 (10 bins): fm ent=0.359 +
+    TX 16 (10 bins): fm ent=0.236 +
+    TX 17 (22 bins): gsm ent=0.041 -
+    TX 18 (23 bins): gsm ent=0.385 -
+  File 30/41: alcorcon_Feb_3_21SpectrumBands_85_120_fm_alcorcon_85_120.npy (85-120MHz)
+    TX 1 (22 bins): unkn ent=0.988 -
+    TX 2 (27 bins): unkn ent=0.949 -
+    TX 3 (28 bins): unkn ent=1.001 -
+    TX 4 (10 bins): fm ent=0.090 +
+    TX 5 (10 bins): fm ent=0.240 +
+    TX 6 (11 bins): fm ent=0.256 +
+    TX 7 (10 bins): fm ent=0.264 +
+    TX 8 (43 bins): gsm ent=0.042 -
+    TX 9 (25 bins): gsm ent=0.041 -
+    TX 10 (10 bins): fm ent=0.460 +
+    TX 11 (12 bins): fm ent=0.654 +
+    TX 12 (10 bins): fm ent=0.371 +
+    TX 13 (10 bins): fm ent=0.205 +
+    TX 14 (37 bins): gsm ent=0.041 -
+    TX 15 (23 bins): gsm ent=0.042 -
+    TX 16 (23 bins): gsm ent=0.322 -
+  File 31/41: SpectrumBands_87_102_fm_Swis_87_102.npy (87-102MHz)
+    TX 1 (12 bins): unkn ent=0.906 -
+    TX 2 (15 bins): unkn ent=0.990 -
+    TX 3 (17 bins): unkn ent=0.986 -
+    TX 4 (15 bins): unkn ent=0.776 -
+    TX 5 (12 bins): unkn ent=0.929 -
+    TX 6 (16 bins): unkn ent=0.743 -
+    TX 7 (13 bins): gsm ent=0.673 -
+    TX 8 (17 bins): gsm ent=0.274 -
+    TX 9 (15 bins): unkn ent=0.998 -
+    TX 10 (17 bins): fm ent=0.066 +
+    TX 11 (15 bins): unkn ent=0.952 -
+    TX 12 (12 bins): unkn ent=0.837 -
+    TX 13 (16 bins): unkn ent=0.721 -
+    TX 14 (22 bins): fm ent=0.119 +
+    TX 15 (16 bins): gsm ent=0.422 -
+    TX 16 (19 bins): unkn ent=0.999 -
+    TX 17 (19 bins): unkn ent=0.982 -
+    TX 18 (13 bins): unkn ent=0.978 -
+    TX 19 (23 bins): gsm ent=0.062 -
+    TX 20 (12 bins): gsm ent=0.636 -
+    TX 21 (21 bins): unkn ent=0.990 -
+    TX 22 (18 bins): fm ent=0.078 +
+    TX 23 (12 bins): unkn ent=0.721 -
+    TX 24 (18 bins): gsm ent=0.424 -
+  File 32/41: SpectrumBands_90_120_fm_Esp_90_120.npy (90-120MHz)
+    TX 1 (10 bins): fm ent=0.180 +
+    TX 2 (10 bins): fm ent=0.124 +
+    TX 3 (10 bins): fm ent=0.285 +
+    TX 4 (10 bins): fm ent=0.090 +
+    TX 5 (11 bins): fm ent=0.162 +
+    TX 6 (11 bins): fm ent=0.512 +
+    TX 7 (12 bins): fm ent=0.106 +
+    TX 8 (10 bins): fm ent=0.155 +
+    TX 9 (10 bins): fm ent=0.369 +
+    TX 10 (10 bins): fm ent=0.161 +
+    TX 11 (22 bins): unkn ent=0.713 -
+    TX 12 (10 bins): fm ent=0.333 +
+    TX 13 (11 bins): fm ent=0.230 +
+    TX 14 (10 bins): fm ent=0.109 +
+    TX 15 (11 bins): fm ent=0.102 +
+    TX 16 (10 bins): fm ent=0.121 +
+  File 33/41: SpectrumBands_85_120_fm_Swis_85_120.npy (85-120MHz)
+    TX 1 (29 bins): gsm ent=0.041 -
+    TX 2 (36 bins): gsm ent=0.041 -
+    TX 3 (11 bins): gsm ent=0.054 -
+    TX 4 (12 bins): gsm ent=0.077 -
+    TX 5 (13 bins): gsm ent=0.069 -
+    TX 6 (17 bins): gsm ent=0.122 -
+    TX 7 (11 bins): fm ent=0.674 +
+    TX 8 (12 bins): unkn ent=0.713 -
+    TX 9 (13 bins): fm ent=0.254 +
+    TX 10 (18 bins): unkn ent=0.733 -
+    TX 11 (21 bins): unkn ent=0.880 -
+    TX 12 (14 bins): gsm ent=0.561 -
+    TX 13 (29 bins): gsm ent=0.447 -
+    TX 14 (29 bins): gsm ent=0.043 -
+    TX 15 (15 bins): unkn ent=0.998 -
+    TX 16 (12 bins): gsm ent=0.385 -
+    TX 17 (17 bins): gsm ent=0.046 -
+    TX 18 (12 bins): unkn ent=0.859 -
+    TX 19 (27 bins): gsm ent=0.042 -
+    TX 20 (10 bins): unkn ent=0.715 -
+    TX 21 (23 bins): gsm ent=0.042 -
+    TX 22 (15 bins): gsm ent=0.113 -
+    TX 23 (23 bins): gsm ent=0.044 -
+    TX 24 (28 bins): gsm ent=0.044 -
+    TX 25 (29 bins): gsm ent=0.053 -
+    TX 26 (28 bins): gsm ent=0.042 -
+    TX 27 (28 bins): unkn ent=0.954 -
+    TX 28 (12 bins): fm ent=0.643 +
+    TX 29 (65 bins): unkn ent=0.915 -
+    TX 30 (15 bins): gsm ent=0.268 -
+    TX 31 (15 bins): gsm ent=0.618 -
+    TX 32 (19 bins): gsm ent=0.057 -
+    TX 33 (13 bins): unkn ent=0.981 -
+    TX 34 (43 bins): gsm ent=0.042 -
+    TX 35 (19 bins): gsm ent=0.047 -
+    TX 36 (17 bins): gsm ent=0.528 -
+    TX 37 (19 bins): gsm ent=0.041 -
+    TX 38 (12 bins): gsm ent=0.346 -
+  File 34/41: SpectrumBands_80_120_fm_Esp_80_120.npy (80-120MHz)
+    TX 1 (18 bins): gsm ent=0.041 -
+    TX 2 (15 bins): gsm ent=0.678 -
+    TX 3 (12 bins): fm ent=0.320 +
+    TX 4 (12 bins): gsm ent=0.443 -
+    TX 5 (19 bins): gsm ent=0.578 -
+    TX 6 (11 bins): unkn ent=0.949 -
+    TX 7 (22 bins): unkn ent=1.000 -
+    TX 8 (22 bins): fm ent=0.404 +
+    TX 9 (20 bins): unkn ent=0.973 -
+    TX 10 (13 bins): unkn ent=0.996 -
+    TX 11 (16 bins): unkn ent=0.893 -
+    TX 12 (15 bins): unkn ent=0.791 -
+    TX 13 (10 bins): fm ent=0.523 +
+    TX 14 (15 bins): unkn ent=0.924 -
+    TX 15 (14 bins): fm ent=0.346 +
+    TX 16 (20 bins): unkn ent=0.979 -
+    TX 17 (17 bins): unkn ent=0.713 -
+    TX 18 (25 bins): unkn ent=0.964 -
+    TX 19 (12 bins): fm ent=0.513 +
+    TX 20 (25 bins): unkn ent=0.775 -
+    TX 21 (21 bins): fm ent=0.534 +
+    TX 22 (20 bins): unkn ent=0.973 -
+    TX 23 (21 bins): fm ent=0.653 +
+    TX 24 (13 bins): gsm ent=0.204 -
+    TX 25 (15 bins): gsm ent=0.553 -
+    TX 26 (15 bins): unkn ent=0.714 -
+    TX 27 (26 bins): unkn ent=1.001 -
+    TX 28 (15 bins): unkn ent=0.948 -
+    TX 29 (30 bins): fm ent=0.466 +
+    TX 30 (77 bins): unkn ent=0.884 -
+    TX 31 (16 bins): unkn ent=0.990 -
+  File 35/41: SpectrumBands_100_120_fm_Ger_100_120.npy (100-120MHz)
+    TX 1 (26 bins): unkn ent=0.973 -
+    TX 2 (14 bins): fm ent=0.514 +
+    TX 3 (14 bins): fm ent=0.137 +
+    TX 4 (12 bins): fm ent=0.609 +
+    TX 5 (16 bins): gsm ent=0.132 -
+    TX 6 (13 bins): gsm ent=0.663 -
+    TX 7 (20 bins): unkn ent=0.796 -
+    TX 8 (11 bins): fm ent=0.074 +
+    TX 9 (24 bins): gsm ent=0.044 -
+    TX 10 (14 bins): unkn ent=0.841 -
+    TX 11 (11 bins): unkn ent=0.949 -
+    TX 12 (12 bins): fm ent=0.583 +
+    TX 13 (21 bins): unkn ent=0.760 -
+    TX 14 (19 bins): gsm ent=0.048 -
+    TX 15 (30 bins): fm ent=0.514 +
+    TX 16 (28 bins): gsm ent=0.045 -
+  File 36/41: SpectrumBands_80_120_fm_Esp_80_120.npy (80-120MHz)
+    TX 1 (10 bins): fm ent=0.174 +
+    TX 2 (11 bins): fm ent=0.468 +
+    TX 3 (10 bins): fm ent=0.085 +
+    TX 4 (11 bins): fm ent=0.319 +
+    TX 5 (12 bins): fm ent=0.198 +
+    TX 6 (13 bins): fm ent=0.575 +
+    TX 7 (11 bins): fm ent=0.106 +
+    TX 8 (10 bins): fm ent=0.475 +
+    TX 9 (11 bins): fm ent=0.432 +
+    TX 10 (10 bins): fm ent=0.437 +
+    TX 11 (10 bins): fm ent=0.316 +
+    TX 12 (10 bins): fm ent=0.254 +
+    TX 13 (10 bins): fm ent=0.324 +
+    TX 14 (11 bins): fm ent=0.211 +
+    TX 15 (10 bins): fm ent=0.237 +
+    TX 16 (11 bins): fm ent=0.230 +
+    TX 17 (10 bins): unkn ent=0.799 -
+  File 37/41: SpectrumBands_85_105_fm_Esp_85_105.npy (85-105MHz)
+    TX 1 (17 bins): gsm ent=0.541 -
+    TX 2 (57 bins): gsm ent=0.490 -
+    TX 3 (35 bins): fm ent=0.197 +
+    TX 4 (19 bins): unkn ent=0.927 -
+    TX 5 (22 bins): unkn ent=0.800 -
+    TX 6 (11 bins): fm ent=0.498 +
+    TX 7 (18 bins): unkn ent=0.795 -
+    TX 8 (25 bins): fm ent=0.102 +
+    TX 9 (21 bins): fm ent=0.305 +
+    TX 10 (51 bins): gsm ent=0.087 -
+    TX 11 (32 bins): gsm ent=0.041 -
+    TX 12 (11 bins): fm ent=0.245 +
+    TX 13 (23 bins): unkn ent=0.711 -
+    TX 14 (15 bins): unkn ent=0.791 -
+    TX 15 (17 bins): gsm ent=0.102 -
+    TX 16 (36 bins): gsm ent=0.041 -
+    TX 17 (25 bins): fm ent=0.519 +
+    TX 18 (21 bins): fm ent=0.079 +
+    TX 19 (17 bins): fm ent=0.679 +
+    TX 20 (15 bins): unkn ent=0.885 -
+    TX 21 (20 bins): fm ent=0.068 +
+    TX 22 (22 bins): fm ent=0.092 +
+    TX 23 (16 bins): gsm ent=0.111 -
+    TX 24 (11 bins): fm ent=0.155 +
+    TX 25 (11 bins): unkn ent=1.000 -
+    TX 26 (12 bins): unkn ent=1.001 -
+    TX 27 (27 bins): gsm ent=0.041 -
+    TX 28 (16 bins): unkn ent=0.997 -
+  File 38/41: SpectrumBands_80_120_fm_scalessio_80_120.npy (80-120MHz)
+    TX 1 (14 bins): unkn ent=0.892 -
+    TX 2 (15 bins): fm ent=0.573 +
+    TX 3 (13 bins): fm ent=0.410 +
+    TX 4 (16 bins): gsm ent=0.602 -
+    TX 5 (15 bins): gsm ent=0.546 -
+    TX 6 (12 bins): fm ent=0.562 +
+    TX 7 (16 bins): unkn ent=0.750 -
+    TX 8 (13 bins): unkn ent=0.978 -
+    TX 9 (11 bins): fm ent=0.274 +
+    TX 10 (23 bins): gsm ent=0.623 -
+    TX 11 (12 bins): gsm ent=0.162 -
+    TX 12 (22 bins): gsm ent=0.230 -
+    TX 13 (16 bins): gsm ent=0.074 -
+    TX 14 (19 bins): gsm ent=0.049 -
+    TX 15 (15 bins): gsm ent=0.382 -
+    TX 16 (12 bins): gsm ent=0.274 -
+    TX 17 (17 bins): gsm ent=0.466 -
+    TX 18 (10 bins): fm ent=0.101 +
+    TX 19 (43 bins): gsm ent=0.043 -
+    TX 20 (18 bins): gsm ent=0.046 -
+    TX 21 (62 bins): gsm ent=0.581 -
+    TX 22 (12 bins): gsm ent=0.487 -
+    TX 23 (41 bins): gsm ent=0.045 -
+    TX 24 (141 bins): dab ent=0.081 -
+    TX 25 (21 bins): gsm ent=0.453 -
+    TX 26 (25 bins): gsm ent=0.041 -
+    TX 27 (20 bins): gsm ent=0.042 -
+    TX 28 (103 bins): dab ent=0.065 -
+    TX 29 (13 bins): gsm ent=0.308 -
+    TX 30 (30 bins): gsm ent=0.042 -
+    TX 31 (23 bins): gsm ent=0.077 -
+    TX 32 (22 bins): gsm ent=0.042 -
+    TX 33 (32 bins): gsm ent=0.042 -
+    TX 34 (31 bins): gsm ent=0.046 -
+    TX 35 (24 bins): fm ent=0.198 +
+    TX 36 (20 bins): gsm ent=0.151 -
+    TX 37 (12 bins): gsm ent=0.548 -
+    TX 38 (32 bins): unkn ent=0.909 -
+    TX 39 (12 bins): unkn ent=0.944 -
+    TX 40 (15 bins): gsm ent=0.128 -
+    TX 41 (16 bins): fm ent=0.400 +
+    TX 42 (16 bins): unkn ent=0.907 -
+    TX 43 (16 bins): unkn ent=0.769 -
+    TX 44 (22 bins): unkn ent=0.959 -
+    TX 45 (14 bins): unkn ent=0.839 -
+    TX 46 (14 bins): fm ent=0.686 +
+    TX 47 (25 bins): unkn ent=0.851 -
+    TX 48 (11 bins): fm ent=0.377 +
+    TX 49 (18 bins): unkn ent=0.964 -
+    TX 50 (27 bins): gsm ent=0.481 -
+    TX 51 (17 bins): unkn ent=0.984 -
+    TX 52 (19 bins): unkn ent=0.998 -
+    TX 53 (18 bins): unkn ent=0.902 -
+    TX 54 (12 bins): unkn ent=0.906 -
+    TX 55 (15 bins): unkn ent=0.999 -
+    TX 56 (19 bins): unkn ent=0.832 -
+    TX 57 (24 bins): gsm ent=0.043 -
+    TX 58 (12 bins): fm ent=0.284 +
+    TX 59 (19 bins): unkn ent=0.720 -
+    TX 60 (22 bins): fm ent=0.226 +
+    TX 61 (21 bins): unkn ent=0.740 -
+    TX 62 (27 bins): unkn ent=0.882 -
+    TX 63 (12 bins): fm ent=0.114 +
+    TX 64 (26 bins): unkn ent=0.848 -
+    TX 65 (21 bins): unkn ent=0.852 -
+    TX 66 (13 bins): unkn ent=0.999 -
+  File 39/41: SpectrumBands_80_120_fm_scalessio_80_120.npy (80-120MHz)
+    TX 1 (14 bins): unkn ent=0.841 -
+    TX 2 (15 bins): fm ent=0.510 +
+    TX 3 (13 bins): fm ent=0.238 +
+    TX 4 (16 bins): gsm ent=0.582 -
+    TX 5 (16 bins): gsm ent=0.489 -
+    TX 6 (12 bins): fm ent=0.340 +
+    TX 7 (16 bins): unkn ent=0.998 -
+    TX 8 (13 bins): unkn ent=1.000 -
+    TX 9 (11 bins): fm ent=0.385 +
+    TX 10 (23 bins): gsm ent=0.661 -
+    TX 11 (12 bins): gsm ent=0.198 -
+    TX 12 (35 bins): gsm ent=0.043 -
+    TX 13 (16 bins): gsm ent=0.076 -
+    TX 14 (19 bins): gsm ent=0.070 -
+    TX 15 (15 bins): gsm ent=0.393 -
+    TX 16 (12 bins): gsm ent=0.246 -
+    TX 17 (17 bins): gsm ent=0.523 -
+    TX 18 (10 bins): fm ent=0.157 +
+    TX 19 (43 bins): gsm ent=0.044 -
+    TX 20 (18 bins): gsm ent=0.047 -
+    TX 21 (62 bins): unkn ent=0.734 -
+    TX 22 (12 bins): gsm ent=0.214 -
+    TX 23 (31 bins): gsm ent=0.042 -
+    TX 24 (122 bins): dab ent=0.053 -
+    TX 25 (18 bins): gsm ent=0.044 -
+    TX 26 (22 bins): unkn ent=0.989 -
+    TX 27 (35 bins): gsm ent=0.042 -
+    TX 28 (13 bins): gsm ent=0.555 -
+    TX 29 (103 bins): dab ent=0.110 -
+    TX 30 (13 bins): gsm ent=0.415 -
+    TX 31 (30 bins): gsm ent=0.042 -
+    TX 32 (23 bins): gsm ent=0.055 -
+    TX 33 (12 bins): unkn ent=0.744 -
+    TX 34 (32 bins): gsm ent=0.043 -
+    TX 35 (32 bins): gsm ent=0.080 -
+    TX 36 (24 bins): fm ent=0.087 +
+    TX 37 (20 bins): gsm ent=0.329 -
+    TX 38 (14 bins): gsm ent=0.412 -
+    TX 39 (45 bins): gsm ent=0.096 -
+    TX 40 (15 bins): gsm ent=0.172 -
+    TX 41 (16 bins): fm ent=0.263 +
+    TX 42 (16 bins): unkn ent=0.721 -
+    TX 43 (16 bins): unkn ent=0.925 -
+    TX 44 (22 bins): unkn ent=1.001 -
+    TX 45 (14 bins): unkn ent=0.884 -
+    TX 46 (13 bins): fm ent=0.473 +
+    TX 47 (25 bins): unkn ent=0.927 -
+    TX 48 (11 bins): fm ent=0.106 +
+    TX 49 (20 bins): unkn ent=1.001 -
+    TX 50 (28 bins): unkn ent=0.980 -
+    TX 51 (17 bins): unkn ent=0.990 -
+    TX 52 (19 bins): unkn ent=0.954 -
+    TX 53 (19 bins): fm ent=0.461 +
+    TX 54 (12 bins): unkn ent=0.930 -
+    TX 55 (15 bins): unkn ent=0.992 -
+    TX 56 (18 bins): unkn ent=0.989 -
+    TX 57 (24 bins): gsm ent=0.230 -
+    TX 58 (19 bins): fm ent=0.318 +
+    TX 59 (19 bins): unkn ent=0.885 -
+    TX 60 (21 bins): fm ent=0.239 +
+    TX 61 (21 bins): unkn ent=0.818 -
+    TX 62 (27 bins): unkn ent=0.859 -
+    TX 63 (12 bins): fm ent=0.101 +
+    TX 64 (19 bins): fm ent=0.502 +
+    TX 65 (21 bins): unkn ent=0.985 -
+    TX 66 (13 bins): unkn ent=1.001 -
+  File 40/41: SpectrumBands_102_110_fm_fr_102_110.npy (102-110MHz)
+    TX 1 (25 bins): fm ent=0.243 +
+    TX 2 (26 bins): fm ent=0.083 +
+    TX 3 (16 bins): unkn ent=0.955 -
+    TX 4 (15 bins): unkn ent=0.900 -
+    TX 5 (20 bins): fm ent=0.574 +
+    TX 6 (12 bins): fm ent=0.641 +
+    TX 7 (15 bins): fm ent=0.587 +
+    TX 8 (15 bins): unkn ent=0.762 -
+    TX 9 (20 bins): unkn ent=0.754 -
+    TX 10 (26 bins): unkn ent=0.893 -
+    TX 11 (19 bins): fm ent=0.331 +
+    TX 12 (19 bins): fm ent=0.226 +
+  File 41/41: SpectrumBands_102_107_fm_sw_102_107.npy (102-107MHz)
+    TX 1 (16 bins): fm ent=0.559 +
+    TX 2 (12 bins): fm ent=0.684 +
+    TX 3 (13 bins): unkn ent=0.969 -
+    TX 4 (17 bins): unkn ent=1.000 -
+    TX 5 (14 bins): fm ent=0.678 +
+    TX 6 (15 bins): unkn ent=1.001 -
+
+============================================================
+Processing TETRA files... (38 files)
+============================================================
+  File 1/38: SpectrumBands_389_395_tetra_Swis_389_395.npy (389-395MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (12 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (12 bins): width_gate_fail
+    TX 6 (11 bins): width_gate_fail
+    TX 7 (16 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+  File 2/38: SpectrumBands_393_398_tetra_bu_393_398.npy (393-398MHz)
+    TX 1 (75 bins): width_gate_fail
+    TX 2 (34 bins): width_gate_fail
+    TX 3 (37 bins): width_gate_fail
+    TX 4 (26 bins): width_gate_fail
+    TX 5 (37 bins): width_gate_fail
+    TX 6 (20 bins): width_gate_fail
+    TX 7 (26 bins): width_gate_fail
+    TX 8 (13 bins): width_gate_fail
+  File 3/38: SpectrumBands_390_395_tetra_Ita_390_395.npy (390-395MHz)
+  File 4/38: SpectrumBands_189_395_tetra_slv_189_395.npy (189-395MHz)
+    TX 1 (14 bins): width_gate_fail
+    TX 2 (16 bins): width_gate_fail
+    TX 3 (176 bins): unkn ent=1.027 -
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (24 bins): width_gate_fail
+    TX 6 (12 bins): width_gate_fail
+    TX 7 (15 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+    TX 9 (18 bins): width_gate_fail
+    TX 10 (14 bins): width_gate_fail
+    TX 11 (18 bins): width_gate_fail
+    TX 12 (15 bins): width_gate_fail
+    TX 13 (11 bins): width_gate_fail
+    TX 14 (11 bins): width_gate_fail
+    TX 15 (19 bins): width_gate_fail
+    TX 16 (15 bins): width_gate_fail
+    TX 17 (23 bins): width_gate_fail
+    TX 18 (12 bins): width_gate_fail
+    TX 19 (20 bins): width_gate_fail
+    TX 20 (18 bins): width_gate_fail
+    TX 21 (12 bins): width_gate_fail
+    TX 22 (27 bins): width_gate_fail
+    TX 23 (13 bins): width_gate_fail
+    TX 24 (19 bins): width_gate_fail
+    TX 25 (128 bins): unkn ent=1.519 -
+    TX 26 (174 bins): unkn ent=1.454 -
+    TX 27 (11 bins): width_gate_fail
+    TX 28 (12 bins): width_gate_fail
+    TX 29 (11 bins): width_gate_fail
+    TX 30 (15 bins): width_gate_fail
+    TX 31 (161 bins): unkn ent=0.793 -
+    TX 32 (23 bins): width_gate_fail
+    TX 33 (25 bins): width_gate_fail
+    TX 34 (20 bins): width_gate_fail
+    TX 35 (42 bins): width_gate_fail
+    TX 36 (28 bins): width_gate_fail
+    TX 37 (44 bins): width_gate_fail
+    TX 38 (11 bins): width_gate_fail
+    TX 39 (11 bins): width_gate_fail
+    TX 40 (11 bins): width_gate_fail
+    TX 41 (14 bins): width_gate_fail
+    TX 42 (18 bins): width_gate_fail
+    TX 43 (11 bins): width_gate_fail
+    TX 44 (11 bins): width_gate_fail
+    TX 45 (12 bins): width_gate_fail
+    TX 46 (11 bins): width_gate_fail
+    TX 47 (11 bins): width_gate_fail
+    TX 48 (11 bins): width_gate_fail
+    TX 49 (10 bins): width_gate_fail
+  File 5/38: SpectrumBands_304_315_tetra_Switz_304_315.npy (304-315MHz)
+    TX 1 (180 bins): width_gate_fail
+  File 6/38: SpectrumBands_390_394_tetra_ne_390_394.npy (390-394MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+  File 7/38: SpectrumBands_390_395_tetra_ge_390_395.npy (390-395MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+  File 8/38: SpectrumBands_390_395_tetra_ger_390_395.npy (390-395MHz)
+    TX 1 (20 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (13 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+  File 9/38: SpectrumBands_390_394_tetra_Swis_390_394.npy (390-394MHz)
+    TX 1 (13 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+  File 10/38: SpectrumBands_424_429_tetra_cz_424_429.npy (424-429MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (19 bins): width_gate_fail
+    TX 3 (12 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+    TX 6 (11 bins): width_gate_fail
+    TX 7 (11 bins): width_gate_fail
+    TX 8 (17 bins): width_gate_fail
+  File 11/38: SpectrumBands_390_394_tetra_czk_390_394.npy (390-394MHz)
+    TX 1 (11 bins): width_gate_fail
+  File 12/38: SpectrumBands_270_275_tetra_Jap_270_275.npy (270-275MHz)
+    TX 1 (15 bins): gsm ent=0.046 -
+    TX 2 (15 bins): gsm ent=0.461 -
+    TX 3 (12 bins): unkn ent=0.963 +
+    TX 4 (14 bins): gsm ent=0.279 -
+    TX 5 (13 bins): gsm ent=0.396 -
+    TX 6 (15 bins): gsm ent=0.162 -
+  File 13/38: SpectrumBands_425_427_tetra_po_425_427.npy (425-427MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (12 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (12 bins): width_gate_fail
+    TX 6 (29 bins): width_gate_fail
+  File 14/38: SpectrumBands_420_426_tetra_rus_420_426.npy (420-426MHz)
+  File 15/38: SpectrumBands_392_396_tetra_Swis_392_396.npy (392-396MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (24 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+  File 16/38: SpectrumBands_389_395_tetra_Esp_389_395.npy (389-395MHz)
+    TX 1 (22 bins): width_gate_fail
+    TX 2 (19 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (14 bins): width_gate_fail
+    TX 5 (16 bins): width_gate_fail
+    TX 6 (16 bins): width_gate_fail
+    TX 7 (11 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+  File 17/38: SpectrumBands_390_395_tetra_no_390_395.npy (390-395MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (222 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+  File 18/38: SpectrumBands_419_427_tetra_Esp_419_427.npy (419-427MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (53 bins): width_gate_fail
+    TX 5 (27 bins): width_gate_fail
+    TX 6 (19 bins): width_gate_fail
+    TX 7 (25 bins): width_gate_fail
+    TX 8 (61 bins): width_gate_fail
+    TX 9 (57 bins): width_gate_fail
+    TX 10 (11 bins): width_gate_fail
+    TX 11 (17 bins): width_gate_fail
+    TX 12 (3 bins): too_narrow
+    TX 13 (40 bins): width_gate_fail
+    TX 14 (53 bins): width_gate_fail
+  File 19/38: SpectrumBands_389_395_tetra_Switz_389_395.npy (389-395MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (36 bins): width_gate_fail
+  File 20/38: SpectrumBands_390_400_tetra_Switz_390_400.npy (390-400MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (35 bins): width_gate_fail
+  File 21/38: SpectrumBands_389_399_tetra_Cro_389_399.npy (389-399MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (13 bins): width_gate_fail
+    TX 4 (16 bins): width_gate_fail
+    TX 5 (14 bins): width_gate_fail
+    TX 6 (15 bins): width_gate_fail
+    TX 7 (12 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+    TX 9 (11 bins): width_gate_fail
+    TX 10 (11 bins): width_gate_fail
+    TX 11 (11 bins): width_gate_fail
+  File 22/38: SpectrumBands_421_426_tetra_alcorcon_421_426.npy (421-426MHz)
+    TX 1 (15 bins): width_gate_fail
+    TX 2 (17 bins): width_gate_fail
+    TX 3 (19 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (12 bins): width_gate_fail
+    TX 6 (15 bins): width_gate_fail
+    TX 7 (35 bins): width_gate_fail
+    TX 8 (5 bins): unkn ent=0.769 -
+    TX 9 (11 bins): width_gate_fail
+    TX 10 (13 bins): width_gate_fail
+    TX 11 (12 bins): width_gate_fail
+    TX 12 (11 bins): width_gate_fail
+    TX 13 (12 bins): width_gate_fail
+    TX 14 (13 bins): width_gate_fail
+  File 23/38: alcorcon_Feb_2_21SpectrumBands_421_426_tetra_alcorcon_421_426.npy (421-426MHz)
+    TX 1 (24 bins): width_gate_fail
+    TX 2 (17 bins): width_gate_fail
+    TX 3 (18 bins): width_gate_fail
+    TX 4 (14 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+    TX 6 (15 bins): width_gate_fail
+    TX 7 (14 bins): width_gate_fail
+    TX 8 (20 bins): width_gate_fail
+    TX 9 (4 bins): too_narrow
+    TX 10 (12 bins): width_gate_fail
+    TX 11 (12 bins): width_gate_fail
+    TX 12 (11 bins): width_gate_fail
+    TX 13 (11 bins): width_gate_fail
+    TX 14 (11 bins): width_gate_fail
+    TX 15 (13 bins): width_gate_fail
+  File 24/38: alcorcon_Feb_3_21SpectrumBands_421_426_tetra_alcorcon_421_426.npy (421-426MHz)
+    TX 1 (24 bins): width_gate_fail
+    TX 2 (17 bins): width_gate_fail
+    TX 3 (19 bins): width_gate_fail
+    TX 4 (15 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+    TX 6 (15 bins): width_gate_fail
+    TX 7 (35 bins): width_gate_fail
+    TX 8 (5 bins): tetra ent=0.638 +
+    TX 9 (11 bins): width_gate_fail
+    TX 10 (13 bins): width_gate_fail
+    TX 11 (12 bins): width_gate_fail
+    TX 12 (11 bins): width_gate_fail
+    TX 13 (11 bins): width_gate_fail
+    TX 14 (17 bins): width_gate_fail
+  File 25/38: SpectrumBands_390_395_tetra_Swis_390_395.npy (390-395MHz)
+  File 26/38: SpectrumBands_419_424_tetra_Esp_419_424.npy (419-424MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (16 bins): width_gate_fail
+    TX 3 (12 bins): width_gate_fail
+    TX 4 (11 bins): width_gate_fail
+  File 27/38: SpectrumBands_393_395_tetra_Swis_393_395.npy (393-395MHz)
+  File 28/38: SpectrumBands_419_427_tetra_Esp_419_427.npy (419-427MHz)
+    TX 1 (19 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (12 bins): width_gate_fail
+    TX 4 (11 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+    TX 6 (12 bins): width_gate_fail
+    TX 7 (11 bins): width_gate_fail
+    TX 8 (16 bins): width_gate_fail
+    TX 9 (11 bins): width_gate_fail
+    TX 10 (13 bins): width_gate_fail
+    TX 11 (11 bins): width_gate_fail
+  File 29/38: SpectrumBands_371_394_tetra_Ger_371_394.npy (371-394MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (14 bins): width_gate_fail
+  File 30/38: SpectrumBands_392_395_tetra_Esp_392_395.npy (392-395MHz)
+    TX 1 (14 bins): width_gate_fail
+    TX 2 (16 bins): width_gate_fail
+    TX 3 (16 bins): width_gate_fail
+    TX 4 (11 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+  File 31/38: SpectrumBands_421_426_tetra_rack3_421_426.npy (421-426MHz)
+    TX 1 (42 bins): width_gate_fail
+    TX 2 (25 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (15 bins): width_gate_fail
+    TX 6 (12 bins): width_gate_fail
+    TX 7 (11 bins): width_gate_fail
+    TX 8 (12 bins): width_gate_fail
+    TX 9 (21 bins): width_gate_fail
+    TX 10 (14 bins): width_gate_fail
+    TX 11 (23 bins): width_gate_fail
+    TX 12 (12 bins): width_gate_fail
+  File 32/38: SpectrumBands_421_426_tetra_rack3_421_426.npy (421-426MHz)
+    TX 1 (12 bins): width_gate_fail
+  File 33/38: SpectrumBands_389_394_tetra_Esp_389_394.npy (389-394MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (15 bins): width_gate_fail
+    TX 3 (17 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (14 bins): width_gate_fail
+    TX 6 (11 bins): width_gate_fail
+  File 34/38: SpectrumBands_389_395_tetra_oh_389_395.npy (389-395MHz)
+    TX 1 (29 bins): width_gate_fail
+    TX 2 (16 bins): width_gate_fail
+    TX 3 (20 bins): width_gate_fail
+    TX 4 (11 bins): width_gate_fail
+    TX 5 (12 bins): width_gate_fail
+    TX 6 (24 bins): width_gate_fail
+    TX 7 (11 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+    TX 9 (34 bins): width_gate_fail
+    TX 10 (14 bins): width_gate_fail
+    TX 11 (12 bins): width_gate_fail
+    TX 12 (21 bins): width_gate_fail
+    TX 13 (11 bins): width_gate_fail
+    TX 14 (61 bins): width_gate_fail
+    TX 15 (14 bins): width_gate_fail
+    TX 16 (15 bins): width_gate_fail
+  File 35/38: SpectrumBands_421_426_tetra_scalessio_421_426.npy (421-426MHz)
+  File 36/38: SpectrumBands_421_426_tetra_scalessio_421_426.npy (421-426MHz)
+  File 37/38: SpectrumBands_390_394_tetra_fr_390_394.npy (390-394MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (11 bins): width_gate_fail
+  File 38/38: SpectrumBands_390_394_tetra_sw_390_394.npy (390-394MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (19 bins): width_gate_fail
+    TX 3 (13 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+
+============================================================
+Processing LTE files... (41 files)
+============================================================
+  File 1/41: SpectrumBands_788_821_lte_Ita_791_821.npy (788-821MHz)
+    TX 1 (996 bins): dvbt ent=0.230 +
+    TX 2 (42 bins): width_gate_fail
+    TX 3 (950 bins): dvbt ent=0.074 +
+  File 2/41: SpectrumBands_734_768_lte_usa_734_768.npy (734-768MHz)
+    TX 1 (597 bins): lte ent=0.217 -
+    TX 2 (571 bins): lte ent=0.351 -
+    TX 3 (1003 bins): lte ent=0.245 -
+  File 3/41: SpectrumBands_791_821_lte_slv_791_821.npy (791-821MHz)
+  File 4/41: SpectrumBands_791_821_lte_Switz_791_821.npy (791-821MHz)
+    TX 1 (15 bins): width_gate_fail
+    TX 2 (140 bins): width_gate_fail
+    TX 3 (13 bins): width_gate_fail
+  File 5/41: SpectrumBands_791_821_lte_ne_791_821.npy (791-821MHz)
+  File 6/41: SpectrumBands_791_821_lte_ge_791_821.npy (791-821MHz)
+  File 7/41: SpectrumBands_791_821_lte_ger_791_821.npy (791-821MHz)
+  File 8/41: SpectrumBands_791_821_lte_Swis_791_821.npy (791-821MHz)
+    TX 1 (104 bins): width_gate_fail
+    TX 2 (24 bins): width_gate_fail
+    TX 3 (23 bins): width_gate_fail
+    TX 4 (23 bins): width_gate_fail
+    TX 5 (24 bins): width_gate_fail
+    TX 6 (42 bins): width_gate_fail
+    TX 7 (95 bins): width_gate_fail
+    TX 8 (16 bins): width_gate_fail
+  File 9/41: SpectrumBands_791_821_lte_ita_791_821.npy (791-821MHz)
+    TX 1 (46 bins): width_gate_fail
+    TX 2 (202 bins): width_gate_fail
+    TX 3 (209 bins): width_gate_fail
+    TX 4 (203 bins): width_gate_fail
+    TX 5 (204 bins): width_gate_fail
+    TX 6 (85 bins): width_gate_fail
+    TX 7 (29 bins): width_gate_fail
+  File 10/41: SpectrumBands_790_821_lte_cz_790_821.npy (790-821MHz)
+  File 11/41: SpectrumBands_791_821_lte_czk_791_821.npy (791-821MHz)
+    TX 1 (35 bins): width_gate_fail
+    TX 2 (16 bins): width_gate_fail
+    TX 3 (984 bins): lte ent=0.174 +
+    TX 4 (30 bins): width_gate_fail
+  Error loading SpectrumBands_770_80_lte_Jap_770_803.npy: index -1 is out of bounds for axis 0 with size 0
+  File 12/41: SpectrumBands_770_80_lte_Jap_770_803.npy (770-80MHz)
+  File 13/41: SpectrumBands_791_821_lte_Ger_791_821.npy (791-821MHz)
+    TX 1 (22 bins): width_gate_fail
+    TX 2 (84 bins): width_gate_fail
+    TX 3 (24 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (14 bins): width_gate_fail
+    TX 6 (60 bins): width_gate_fail
+    TX 7 (31 bins): width_gate_fail
+    TX 8 (19 bins): width_gate_fail
+  File 14/41: SpectrumBands_734_768_lte_usa_734_768.npy (734-768MHz)
+  File 15/41: SpectrumBands_790_821_lte_po_790_821.npy (790-821MHz)
+    TX 1 (973 bins): lte ent=0.212 -
+    TX 2 (491 bins): lte ent=0.251 -
+    TX 3 (130 bins): width_gate_fail
+    TX 4 (212 bins): width_gate_fail
+    TX 5 (134 bins): width_gate_fail
+    TX 6 (59 bins): width_gate_fail
+    TX 7 (42 bins): width_gate_fail
+    TX 8 (65 bins): width_gate_fail
+    TX 9 (18 bins): width_gate_fail
+  File 16/41: SpectrumBands_734_768_lte_usa_734_768.npy (734-768MHz)
+    TX 1 (986 bins): lte ent=0.143 -
+    TX 2 (1016 bins): lte ent=0.248 -
+  File 17/41: SpectrumBands_791_821_lte_Ita_791_821.npy (791-821MHz)
+    TX 1 (22 bins): width_gate_fail
+    TX 2 (13 bins): width_gate_fail
+    TX 3 (17 bins): width_gate_fail
+    TX 4 (14 bins): width_gate_fail
+    TX 5 (76 bins): width_gate_fail
+    TX 6 (47 bins): width_gate_fail
+    TX 7 (65 bins): width_gate_fail
+    TX 8 (54 bins): width_gate_fail
+    TX 9 (24 bins): width_gate_fail
+    TX 10 (14 bins): width_gate_fail
+    TX 11 (98 bins): width_gate_fail
+    TX 12 (86 bins): width_gate_fail
+    TX 13 (92 bins): width_gate_fail
+  File 18/41: SpectrumBands_791_821_lte_Pol_791_821.npy (791-821MHz)
+    TX 1 (22 bins): width_gate_fail
+    TX 2 (412 bins): width_gate_fail
+    TX 3 (19 bins): width_gate_fail
+    TX 4 (79 bins): width_gate_fail
+    TX 5 (361 bins): width_gate_fail
+    TX 6 (492 bins): width_gate_fail
+    TX 7 (332 bins): width_gate_fail
+    TX 8 (30 bins): width_gate_fail
+    TX 9 (563 bins): width_gate_fail
+  File 19/41: SpectrumBands_791_821_lte_Swis_791_821.npy (791-821MHz)
+  File 20/41: SpectrumBands_791_821_lte_Esp_791_821.npy (791-821MHz)
+  File 21/41: SpectrumBands_790_821_lte_no_790_821.npy (790-821MHz)
+    TX 1 (23 bins): width_gate_fail
+    TX 2 (21 bins): width_gate_fail
+    TX 3 (16 bins): width_gate_fail
+    TX 4 (995 bins): lte ent=0.172 -
+  File 22/41: SpectrumBands_791_821_lte_Esp_791_821.npy (791-821MHz)
+  File 23/41: SpectrumBands_771_823_lte_Switz_771_823.npy (771-823MHz)
+    TX 1 (1071 bins): lte ent=0.214 -
+    TX 2 (380 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (975 bins): lte ent=0.209 -
+    TX 5 (19 bins): width_gate_fail
+    TX 6 (66 bins): width_gate_fail
+    TX 7 (115 bins): width_gate_fail
+    TX 8 (12 bins): width_gate_fail
+    TX 9 (37 bins): width_gate_fail
+    TX 10 (61 bins): width_gate_fail
+    TX 11 (28 bins): width_gate_fail
+    TX 12 (42 bins): width_gate_fail
+    TX 13 (28 bins): width_gate_fail
+    TX 14 (170 bins): width_gate_fail
+    TX 15 (13 bins): width_gate_fail
+    TX 16 (14 bins): width_gate_fail
+    TX 17 (31 bins): width_gate_fail
+    TX 18 (17 bins): width_gate_fail
+    TX 19 (11 bins): width_gate_fail
+    TX 20 (16 bins): width_gate_fail
+    TX 21 (11 bins): width_gate_fail
+    TX 22 (19 bins): width_gate_fail
+    TX 23 (17 bins): width_gate_fail
+    TX 24 (13 bins): width_gate_fail
+    TX 25 (15 bins): width_gate_fail
+    TX 26 (16 bins): width_gate_fail
+    TX 27 (24 bins): width_gate_fail
+  File 24/41: SpectrumBands_788_821_lte_Switz_788_821.npy (788-821MHz)
+    TX 1 (24 bins): width_gate_fail
+    TX 2 (205 bins): width_gate_fail
+    TX 3 (641 bins): lte ent=0.189 -
+    TX 4 (87 bins): width_gate_fail
+    TX 5 (24 bins): width_gate_fail
+  File 25/41: SpectrumBands_791_821_lte_Cro_791_821.npy (791-821MHz)
+    TX 1 (24 bins): width_gate_fail
+  File 26/41: SpectrumBands_791_821_lte_alcorcon_791_821.npy (791-821MHz)
+  File 27/41: alcorcon_Feb_2_21SpectrumBands_791_821_lte_alcorcon_791_821.npy (791-821MHz)
+  File 28/41: alcorcon_Feb_3_21SpectrumBands_791_821_lte_alcorcon_791_821.npy (791-821MHz)
+  File 29/41: SpectrumBands_788_821_lte_Swis_791_821.npy (788-821MHz)
+  File 30/41: SpectrumBands_791_821_lte_Esp_791_821.npy (791-821MHz)
+  File 31/41: SpectrumBands_791_821_lte_Swis_791_821.npy (791-821MHz)
+    TX 1 (977 bins): lte ent=0.172 +
+    TX 2 (23 bins): width_gate_fail
+  File 32/41: SpectrumBands_791_821_lte_Esp_791_821.npy (791-821MHz)
+    TX 1 (24 bins): width_gate_fail
+    TX 2 (80 bins): width_gate_fail
+    TX 3 (48 bins): width_gate_fail
+    TX 4 (23 bins): width_gate_fail
+  File 33/41: SpectrumBands_791_821_lte_Ger_791_821.npy (791-821MHz)
+    TX 1 (17 bins): width_gate_fail
+    TX 2 (13 bins): width_gate_fail
+    TX 3 (21 bins): width_gate_fail
+    TX 4 (974 bins): unkn ent=0.739 -
+  File 34/41: SpectrumBands_791_821_lte_Esp_791_821.npy (791-821MHz)
+  File 35/41: SpectrumBands_791_821_lte_Esp_791_821.npy (791-821MHz)
+  File 36/41: SpectrumBands_791_821_lte_oh_791_821.npy (791-821MHz)
+  File 37/41: SpectrumBands_791_821_lte_oh_791_821.npy (791-821MHz)
+  File 38/41: SpectrumBands_791_821_lte_scalessio_791_821.npy (791-821MHz)
+    TX 1 (994 bins): lte ent=0.199 +
+    TX 2 (995 bins): lte ent=0.214 +
+  File 39/41: SpectrumBands_791_821_lte_scalessio_791_821.npy (791-821MHz)
+    TX 1 (42 bins): width_gate_fail
+    TX 2 (213 bins): width_gate_fail
+    TX 3 (74 bins): width_gate_fail
+    TX 4 (652 bins): width_gate_fail
+    TX 5 (29 bins): width_gate_fail
+    TX 6 (202 bins): width_gate_fail
+    TX 7 (428 bins): width_gate_fail
+    TX 8 (304 bins): width_gate_fail
+    TX 9 (21 bins): width_gate_fail
+  File 40/41: SpectrumBands_760_822_lte_fr_760_822.npy (760-822MHz)
+    TX 1 (976 bins): unkn ent=0.745 -
+    TX 2 (981 bins): lte ent=0.412 -
+    TX 3 (980 bins): lte ent=0.304 -
+    TX 4 (977 bins): unkn ent=0.970 -
+  File 41/41: SpectrumBands_791_821_lte_sw_791_821.npy (791-821MHz)
+    TX 1 (16 bins): width_gate_fail
+    TX 2 (235 bins): width_gate_fail
+    TX 3 (201 bins): width_gate_fail
+    TX 4 (16 bins): width_gate_fail
+    TX 5 (334 bins): width_gate_fail
+    TX 6 (38 bins): width_gate_fail
+
+============================================================
+Processing GSM files... (46 files)
+============================================================
+  File 1/46: SpectrumBands_914_925_gsm_bu_914_925.npy (914-925MHz)
+    TX 1 (19 bins): gsm ent=0.042 +
+    TX 2 (23 bins): gsm ent=0.041 +
+    TX 3 (32 bins): gsm ent=0.041 +
+    TX 4 (27 bins): gsm ent=0.041 +
+    TX 5 (36 bins): width_gate_fail
+    TX 6 (33 bins): gsm ent=0.042 +
+    TX 7 (21 bins): gsm ent=0.041 +
+    TX 8 (20 bins): gsm ent=0.041 +
+  File 2/46: SpectrumBands_936_944_gsm_Ita_936_944.npy (936-944MHz)
+    TX 1 (29 bins): gsm ent=0.041 +
+    TX 2 (52 bins): width_gate_fail
+    TX 3 (32 bins): gsm ent=0.041 +
+    TX 4 (11 bins): width_gate_fail
+    TX 5 (31 bins): gsm ent=0.041 +
+    TX 6 (15 bins): gsm ent=0.109 +
+  Error loading SpectrumBands_9350_941_gsm_slv_935_491.npy: index -1 is out of bounds for axis 0 with size 0
+  File 3/46: SpectrumBands_9350_941_gsm_slv_935_491.npy (9350-941MHz)
+  File 4/46: SpectrumBands_920_935_gsm_ne_920_935.npy (920-935MHz)
+    TX 1 (49 bins): width_gate_fail
+    TX 2 (22 bins): gsm ent=0.041 +
+    TX 3 (431 bins): width_gate_fail
+    TX 4 (24 bins): gsm ent=0.041 +
+    TX 5 (41 bins): width_gate_fail
+    TX 6 (38 bins): width_gate_fail
+  File 5/46: SpectrumBands_943_952_gsm_ge_943_952.npy (943-952MHz)
+    TX 1 (427 bins): width_gate_fail
+    TX 2 (39 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+  File 6/46: SpectrumBands_920_937_gsm_ger_920_937.npy (920-937MHz)
+    TX 1 (40 bins): width_gate_fail
+    TX 2 (17 bins): gsm ent=0.041 +
+    TX 3 (29 bins): gsm ent=0.041 +
+    TX 4 (37 bins): width_gate_fail
+    TX 5 (19 bins): unkn ent=1.245 -
+    TX 6 (131 bins): width_gate_fail
+    TX 7 (101 bins): width_gate_fail
+    TX 8 (42 bins): width_gate_fail
+    TX 9 (56 bins): width_gate_fail
+    TX 10 (53 bins): width_gate_fail
+    TX 11 (42 bins): width_gate_fail
+    TX 12 (161 bins): width_gate_fail
+  File 7/46: SpectrumBands_930_960_gsm_ita_620_686.npy (930-960MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (27 bins): gsm ent=0.041 +
+    TX 4 (15 bins): gsm ent=0.041 +
+    TX 5 (43 bins): width_gate_fail
+    TX 6 (23 bins): gsm ent=0.041 +
+    TX 7 (17 bins): gsm ent=0.041 +
+    TX 8 (31 bins): gsm ent=0.041 +
+    TX 9 (69 bins): width_gate_fail
+    TX 10 (18 bins): gsm ent=0.041 +
+    TX 11 (25 bins): gsm ent=0.041 +
+    TX 12 (11 bins): width_gate_fail
+    TX 13 (15 bins): gsm ent=0.042 +
+    TX 14 (23 bins): gsm ent=0.041 +
+    TX 15 (332 bins): width_gate_fail
+    TX 16 (64 bins): width_gate_fail
+    TX 17 (33 bins): gsm ent=0.041 +
+    TX 18 (50 bins): width_gate_fail
+    TX 19 (32 bins): gsm ent=0.041 +
+    TX 20 (43 bins): width_gate_fail
+  File 8/46: SpectrumBands_925_930_gsm_cz_925_930.npy (925-930MHz)
+    TX 1 (27 bins): gsm ent=0.041 +
+    TX 2 (13 bins): width_gate_fail
+    TX 3 (23 bins): gsm ent=0.041 +
+    TX 4 (19 bins): gsm ent=0.041 +
+    TX 5 (12 bins): width_gate_fail
+    TX 6 (51 bins): width_gate_fail
+    TX 7 (32 bins): gsm ent=0.041 +
+    TX 8 (30 bins): gsm ent=0.041 +
+  File 9/46: SpectrumBands_921_926_gsm_czk_921_926.npy (921-926MHz)
+    TX 1 (36 bins): width_gate_fail
+  File 10/46: SpectrumBands_85_85_gsm_Jap_850_857.npy (85-85MHz)
+    TX 1 (11 bins): unkn ent=0.783 -
+  File 11/46: SpectrumBands_925_960_gsm_Ger_925_960.npy (925-960MHz)
+    TX 1 (18 bins): gsm ent=0.041 +
+    TX 2 (21 bins): gsm ent=0.041 +
+    TX 3 (13 bins): width_gate_fail
+    TX 4 (31 bins): gsm ent=0.041 +
+    TX 5 (21 bins): gsm ent=0.041 +
+    TX 6 (29 bins): gsm ent=0.041 +
+    TX 7 (15 bins): gsm ent=0.041 +
+    TX 8 (50 bins): width_gate_fail
+    TX 9 (22 bins): gsm ent=0.041 +
+    TX 10 (13 bins): width_gate_fail
+    TX 11 (61 bins): width_gate_fail
+    TX 12 (19 bins): gsm ent=0.041 +
+    TX 13 (18 bins): gsm ent=0.041 +
+    TX 14 (18 bins): gsm ent=0.041 +
+    TX 15 (13 bins): width_gate_fail
+    TX 16 (20 bins): gsm ent=0.041 +
+    TX 17 (13 bins): width_gate_fail
+    TX 18 (21 bins): gsm ent=0.041 +
+    TX 19 (19 bins): gsm ent=0.041 +
+    TX 20 (34 bins): gsm ent=0.041 +
+    TX 21 (26 bins): gsm ent=0.041 +
+    TX 22 (14 bins): gsm ent=0.041 +
+    TX 23 (12 bins): width_gate_fail
+  File 12/46: SpectrumBands_935_943_gsm_po_935_943.npy (935-943MHz)
+    TX 1 (21 bins): gsm ent=0.045 +
+    TX 2 (33 bins): gsm ent=0.192 +
+    TX 3 (13 bins): width_gate_fail
+    TX 4 (11 bins): width_gate_fail
+    TX 5 (44 bins): width_gate_fail
+    TX 6 (46 bins): width_gate_fail
+    TX 7 (16 bins): gsm ent=0.089 +
+    TX 8 (31 bins): gsm ent=0.054 +
+    TX 9 (18 bins): gsm ent=0.044 +
+    TX 10 (47 bins): width_gate_fail
+    TX 11 (26 bins): gsm ent=0.328 +
+  File 13/46: SpectrumBands_934_947_gsm_Ita_934_937.npy (934-947MHz)
+    TX 1 (15 bins): gsm ent=0.146 +
+    TX 2 (32 bins): gsm ent=0.191 +
+    TX 3 (30 bins): gsm ent=0.301 +
+    TX 4 (35 bins): gsm ent=0.150 +
+    TX 5 (39 bins): width_gate_fail
+    TX 6 (40 bins): width_gate_fail
+    TX 7 (33 bins): gsm ent=0.637 +
+    TX 8 (67 bins): width_gate_fail
+    TX 9 (31 bins): gsm ent=0.043 +
+    TX 10 (25 bins): gsm ent=0.041 +
+    TX 11 (26 bins): gsm ent=0.042 +
+    TX 12 (40 bins): width_gate_fail
+    TX 13 (30 bins): unkn ent=0.771 -
+    TX 14 (13 bins): width_gate_fail
+  File 14/46: SpectrumBands_935_943_gsm_Pol_935_943.npy (935-943MHz)
+    TX 1 (64 bins): width_gate_fail
+    TX 2 (123 bins): width_gate_fail
+    TX 3 (17 bins): gsm ent=0.041 +
+    TX 4 (26 bins): gsm ent=0.041 +
+    TX 5 (24 bins): gsm ent=0.041 +
+    TX 6 (26 bins): gsm ent=0.041 +
+    TX 7 (28 bins): gsm ent=0.041 +
+    TX 8 (21 bins): gsm ent=0.041 +
+    TX 9 (28 bins): gsm ent=0.041 +
+    TX 10 (30 bins): gsm ent=0.041 +
+    TX 11 (25 bins): gsm ent=0.041 +
+    TX 12 (23 bins): gsm ent=0.041 +
+    TX 13 (37 bins): width_gate_fail
+  File 15/46: SpectrumBands_933_961_gsm_rus_933_961.npy (933-961MHz)
+    TX 1 (24 bins): gsm ent=0.041 +
+    TX 2 (45 bins): width_gate_fail
+    TX 3 (42 bins): width_gate_fail
+    TX 4 (18 bins): gsm ent=0.041 +
+    TX 5 (21 bins): gsm ent=0.041 +
+    TX 6 (43 bins): width_gate_fail
+    TX 7 (18 bins): gsm ent=0.041 +
+    TX 8 (46 bins): width_gate_fail
+    TX 9 (24 bins): gsm ent=0.041 +
+    TX 10 (38 bins): width_gate_fail
+    TX 11 (21 bins): gsm ent=0.041 +
+    TX 12 (28 bins): gsm ent=0.041 +
+    TX 13 (18 bins): gsm ent=0.047 +
+    TX 14 (16 bins): gsm ent=0.208 +
+    TX 15 (77 bins): width_gate_fail
+    TX 16 (16 bins): gsm ent=0.041 +
+    TX 17 (69 bins): width_gate_fail
+    TX 18 (32 bins): gsm ent=0.041 +
+    TX 19 (39 bins): width_gate_fail
+    TX 20 (38 bins): width_gate_fail
+    TX 21 (24 bins): gsm ent=0.041 +
+    TX 22 (53 bins): width_gate_fail
+    TX 23 (20 bins): gsm ent=0.041 +
+    TX 24 (12 bins): width_gate_fail
+    TX 25 (24 bins): gsm ent=0.041 +
+    TX 26 (23 bins): gsm ent=0.041 +
+    TX 27 (28 bins): gsm ent=0.041 +
+    TX 28 (91 bins): width_gate_fail
+    TX 29 (47 bins): width_gate_fail
+    TX 30 (44 bins): width_gate_fail
+    TX 31 (70 bins): width_gate_fail
+    TX 32 (104 bins): width_gate_fail
+    TX 33 (69 bins): width_gate_fail
+    TX 34 (25 bins): gsm ent=0.041 +
+    TX 35 (21 bins): gsm ent=0.041 +
+    TX 36 (20 bins): gsm ent=0.041 +
+    TX 37 (56 bins): width_gate_fail
+    TX 38 (25 bins): gsm ent=0.041 +
+    TX 39 (18 bins): gsm ent=0.041 +
+  File 16/46: SpectrumBands_933_938_gsm_Esp_933_938.npy (933-938MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (47 bins): width_gate_fail
+    TX 3 (36 bins): width_gate_fail
+    TX 4 (18 bins): gsm ent=0.041 +
+    TX 5 (22 bins): gsm ent=0.041 +
+    TX 6 (31 bins): gsm ent=0.041 +
+    TX 7 (23 bins): gsm ent=0.041 +
+    TX 8 (14 bins): gsm ent=0.048 +
+    TX 9 (30 bins): gsm ent=0.041 +
+    TX 10 (54 bins): width_gate_fail
+    TX 11 (17 bins): gsm ent=0.302 +
+  File 17/46: SpectrumBands_942_949_gsm_no_942_949.npy (942-949MHz)
+    TX 1 (36 bins): width_gate_fail
+    TX 2 (32 bins): gsm ent=0.041 +
+    TX 3 (23 bins): gsm ent=0.069 +
+    TX 4 (41 bins): width_gate_fail
+    TX 5 (38 bins): width_gate_fail
+    TX 6 (13 bins): width_gate_fail
+  File 18/46: SpectrumBands_954_960_gsm_Esp_954_960.npy (954-960MHz)
+    TX 1 (38 bins): width_gate_fail
+    TX 2 (29 bins): unkn ent=0.904 -
+    TX 3 (15 bins): gsm ent=0.076 +
+    TX 4 (17 bins): gsm ent=0.060 +
+    TX 5 (24 bins): gsm ent=0.063 +
+    TX 6 (24 bins): gsm ent=0.367 +
+  File 19/46: SpectrumBands_936_944_gsm_Switz_936_944.npy (936-944MHz)
+  File 20/46: SpectrumBands_949_960_gsm_Cro_949_960.npy (949-960MHz)
+    TX 1 (31 bins): gsm ent=0.041 +
+    TX 2 (23 bins): gsm ent=0.041 +
+    TX 3 (28 bins): gsm ent=0.041 +
+    TX 4 (31 bins): gsm ent=0.041 +
+    TX 5 (51 bins): width_gate_fail
+    TX 6 (22 bins): gsm ent=0.041 +
+    TX 7 (17 bins): gsm ent=0.041 +
+    TX 8 (37 bins): width_gate_fail
+    TX 9 (63 bins): width_gate_fail
+    TX 10 (45 bins): width_gate_fail
+    TX 11 (46 bins): width_gate_fail
+  File 21/46: SpectrumBands_924_929_gsm_alcorcon_924_929.npy (924-929MHz)
+    TX 1 (50 bins): width_gate_fail
+    TX 2 (16 bins): unkn ent=0.913 -
+    TX 3 (19 bins): gsm ent=0.042 +
+    TX 4 (49 bins): width_gate_fail
+    TX 5 (16 bins): fm ent=0.632 -
+  File 22/46: SpectrumBands_935_939_gsm_alcorcon_935_939.npy (935-939MHz)
+    TX 1 (15 bins): gsm ent=0.046 +
+    TX 2 (46 bins): width_gate_fail
+    TX 3 (25 bins): gsm ent=0.041 +
+    TX 4 (24 bins): gsm ent=0.041 +
+    TX 5 (23 bins): gsm ent=0.060 +
+    TX 6 (34 bins): gsm ent=0.041 +
+    TX 7 (17 bins): gsm ent=0.046 +
+  File 23/46: SpectrumBands_954_960_gsm_alcorcon_9544_9604.npy (954-960MHz)
+    TX 1 (19 bins): gsm ent=0.042 +
+    TX 2 (24 bins): gsm ent=0.041 +
+    TX 3 (31 bins): gsm ent=0.042 +
+    TX 4 (40 bins): width_gate_fail
+    TX 5 (114 bins): width_gate_fail
+    TX 6 (46 bins): width_gate_fail
+    TX 7 (28 bins): gsm ent=0.150 +
+  File 24/46: alcorcon_Feb_2_21SpectrumBands_924_929_gsm_alcorcon_924_929.npy (924-929MHz)
+    TX 1 (50 bins): width_gate_fail
+    TX 2 (16 bins): gsm ent=0.659 +
+    TX 3 (19 bins): gsm ent=0.041 +
+    TX 4 (48 bins): width_gate_fail
+    TX 5 (13 bins): width_gate_fail
+    TX 6 (16 bins): unkn ent=0.914 -
+  File 25/46: alcorcon_Feb_2_21SpectrumBands_935_939_gsm_alcorcon_935_939.npy (935-939MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (47 bins): width_gate_fail
+    TX 3 (26 bins): gsm ent=0.041 +
+    TX 4 (23 bins): gsm ent=0.042 +
+    TX 5 (21 bins): gsm ent=0.050 +
+    TX 6 (53 bins): width_gate_fail
+  File 26/46: alcorcon_Feb_2_21SpectrumBands_954_960_gsm_alcorcon_9544_9604.npy (954-960MHz)
+    TX 1 (20 bins): gsm ent=0.042 +
+    TX 2 (23 bins): gsm ent=0.041 +
+    TX 3 (30 bins): gsm ent=0.042 +
+    TX 4 (38 bins): width_gate_fail
+    TX 5 (113 bins): width_gate_fail
+    TX 6 (74 bins): width_gate_fail
+  File 27/46: alcorcon_Feb_3_21SpectrumBands_924_929_gsm_alcorcon_924_929.npy (924-929MHz)
+    TX 1 (47 bins): width_gate_fail
+    TX 2 (95 bins): width_gate_fail
+    TX 3 (12 bins): width_gate_fail
+    TX 4 (52 bins): width_gate_fail
+    TX 5 (16 bins): unkn ent=1.001 -
+  File 28/46: alcorcon_Feb_3_21SpectrumBands_935_939_gsm_alcorcon_935_939.npy (935-939MHz)
+    TX 1 (47 bins): width_gate_fail
+    TX 2 (26 bins): gsm ent=0.041 +
+    TX 3 (19 bins): gsm ent=0.041 +
+    TX 4 (17 bins): gsm ent=0.046 +
+    TX 5 (45 bins): width_gate_fail
+  File 29/46: alcorcon_Feb_3_21SpectrumBands_954_960_gsm_alcorcon_9544_9604.npy (954-960MHz)
+    TX 1 (22 bins): gsm ent=0.041 +
+    TX 2 (21 bins): gsm ent=0.041 +
+    TX 3 (31 bins): gsm ent=0.042 +
+    TX 4 (40 bins): width_gate_fail
+    TX 5 (57 bins): width_gate_fail
+    TX 6 (43 bins): width_gate_fail
+    TX 7 (76 bins): width_gate_fail
+  File 30/46: SpectrumBands_936_944_gsm_Swis_936_944.npy (936-944MHz)
+    TX 1 (146 bins): width_gate_fail
+    TX 2 (112 bins): width_gate_fail
+  File 31/46: SpectrumBands_924_929_gsm_Esp_924_929.npy (924-929MHz)
+    TX 1 (44 bins): width_gate_fail
+    TX 2 (20 bins): gsm ent=0.041 +
+    TX 3 (34 bins): gsm ent=0.041 +
+    TX 4 (73 bins): width_gate_fail
+    TX 5 (20 bins): gsm ent=0.045 +
+    TX 6 (20 bins): gsm ent=0.041 +
+    TX 7 (40 bins): width_gate_fail
+  File 32/46: SpectrumBands_922_925_gsm_Swis_922_925.npy (922-925MHz)
+    TX 1 (32 bins): gsm ent=0.041 +
+    TX 2 (22 bins): gsm ent=0.041 +
+    TX 3 (12 bins): width_gate_fail
+  File 33/46: SpectrumBands_925_948_gsm_Ger_925_948.npy (925-948MHz)
+    TX 1 (18 bins): gsm ent=0.041 +
+    TX 2 (21 bins): gsm ent=0.041 +
+    TX 3 (54 bins): width_gate_fail
+    TX 4 (75 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+    TX 6 (34 bins): gsm ent=0.041 +
+    TX 7 (22 bins): gsm ent=0.041 +
+    TX 8 (31 bins): gsm ent=0.041 +
+    TX 9 (14 bins): gsm ent=0.041 +
+    TX 10 (20 bins): gsm ent=0.041 +
+    TX 11 (49 bins): width_gate_fail
+    TX 12 (35 bins): gsm ent=0.041 +
+    TX 13 (38 bins): width_gate_fail
+    TX 14 (29 bins): gsm ent=0.041 +
+    TX 15 (34 bins): gsm ent=0.041 +
+    TX 16 (21 bins): gsm ent=0.041 +
+  File 34/46: SpectrumBands_924_929_gsm_Esp_924_929.npy (924-929MHz)
+    TX 1 (58 bins): width_gate_fail
+    TX 2 (37 bins): width_gate_fail
+    TX 3 (21 bins): gsm ent=0.041 +
+    TX 4 (31 bins): gsm ent=0.041 +
+    TX 5 (71 bins): width_gate_fail
+    TX 6 (133 bins): width_gate_fail
+  File 35/46: SpectrumBands_924_929_gsm_rack3_924_929.npy (924-929MHz)
+    TX 1 (34 bins): gsm ent=0.041 +
+    TX 2 (16 bins): unkn ent=0.752 -
+    TX 3 (25 bins): gsm ent=0.041 +
+    TX 4 (48 bins): width_gate_fail
+    TX 5 (96 bins): width_gate_fail
+  File 36/46: SpectrumBands_935_939_gsm_rack3_935_939.npy (935-939MHz)
+    TX 1 (19 bins): gsm ent=0.041 +
+    TX 2 (20 bins): gsm ent=0.041 +
+    TX 3 (19 bins): gsm ent=0.041 +
+    TX 4 (15 bins): gsm ent=0.042 +
+    TX 5 (21 bins): gsm ent=0.041 +
+  File 37/46: SpectrumBands_954_960_gsm_rack3_9544_9604.npy (954-960MHz)
+    TX 1 (16 bins): unkn ent=0.753 -
+    TX 2 (25 bins): gsm ent=0.041 +
+    TX 3 (58 bins): width_gate_fail
+    TX 4 (47 bins): width_gate_fail
+    TX 5 (21 bins): gsm ent=0.041 +
+    TX 6 (24 bins): gsm ent=0.041 +
+    TX 7 (21 bins): gsm ent=0.041 +
+    TX 8 (22 bins): gsm ent=0.041 +
+  File 38/46: SpectrumBands_924_929_gsm_rack3_924_929.npy (924-929MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (32 bins): gsm ent=0.041 +
+    TX 3 (22 bins): gsm ent=0.041 +
+    TX 4 (17 bins): gsm ent=0.041 +
+  File 39/46: SpectrumBands_935_939_gsm_rack3_935_939.npy (935-939MHz)
+    TX 1 (11 bins): width_gate_fail
+  File 40/46: SpectrumBands_954_960_gsm_rack3_9544_9604.npy (954-960MHz)
+    TX 1 (32 bins): gsm ent=0.041 +
+    TX 2 (18 bins): gsm ent=0.041 +
+    TX 3 (17 bins): gsm ent=0.041 +
+    TX 4 (11 bins): width_gate_fail
+  File 41/46: SpectrumBands_924_929_gsm_Esp_924_929.npy (924-929MHz)
+    TX 1 (373 bins): width_gate_fail
+  File 42/46: SpectrumBands_935_960_gsm_test_935_960.npy (935-960MHz)
+    TX 1 (41 bins): width_gate_fail
+    TX 2 (33 bins): gsm ent=0.041 +
+    TX 3 (40 bins): width_gate_fail
+    TX 4 (40 bins): width_gate_fail
+    TX 5 (36 bins): width_gate_fail
+    TX 6 (21 bins): gsm ent=0.041 +
+    TX 7 (31 bins): gsm ent=0.041 +
+    TX 8 (21 bins): gsm ent=0.041 +
+    TX 9 (85 bins): width_gate_fail
+    TX 10 (41 bins): width_gate_fail
+    TX 11 (35 bins): gsm ent=0.041 +
+    TX 12 (494 bins): width_gate_fail
+    TX 13 (33 bins): gsm ent=0.041 +
+    TX 14 (53 bins): width_gate_fail
+    TX 15 (32 bins): gsm ent=0.041 +
+    TX 16 (38 bins): width_gate_fail
+    TX 17 (49 bins): width_gate_fail
+  File 43/46: SpectrumBands_939_948_gsm_scalessio_939_948.npy (939-948MHz)
+    TX 1 (12 bins): width_gate_fail
+    TX 2 (80 bins): width_gate_fail
+    TX 3 (40 bins): width_gate_fail
+    TX 4 (41 bins): width_gate_fail
+    TX 5 (36 bins): width_gate_fail
+    TX 6 (23 bins): gsm ent=0.041 +
+    TX 7 (33 bins): gsm ent=0.041 +
+    TX 8 (23 bins): gsm ent=0.041 +
+    TX 9 (85 bins): width_gate_fail
+    TX 10 (41 bins): width_gate_fail
+  File 44/46: SpectrumBands_939_948_gsm_scalessio_939_948.npy (939-948MHz)
+    TX 1 (81 bins): width_gate_fail
+    TX 2 (40 bins): width_gate_fail
+    TX 3 (40 bins): width_gate_fail
+    TX 4 (37 bins): width_gate_fail
+    TX 5 (23 bins): gsm ent=0.041 +
+    TX 6 (33 bins): gsm ent=0.041 +
+    TX 7 (37 bins): width_gate_fail
+    TX 8 (86 bins): width_gate_fail
+    TX 9 (40 bins): width_gate_fail
+  File 45/46: SpectrumBands_932_938_gsm_932_938.npy (932-938MHz)
+    TX 1 (23 bins): gsm ent=0.041 +
+    TX 2 (19 bins): gsm ent=0.041 +
+    TX 3 (42 bins): width_gate_fail
+    TX 4 (39 bins): width_gate_fail
+    TX 5 (28 bins): gsm ent=0.041 +
+    TX 6 (55 bins): width_gate_fail
+    TX 7 (28 bins): gsm ent=0.041 +
+  File 46/46: SpectrumBands_922_925_gsm_sw_922_925.npy (922-925MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (38 bins): width_gate_fail
+    TX 3 (12 bins): width_gate_fail
+
+============================================================
+Processing DAB files... (32 files)
+============================================================
+  File 1/32: SpectrumBands_207_228_dab_Swis_207_228.npy (207-228MHz)
+    TX 1 (438 bins): width_gate_fail
+    TX 2 (173 bins): unkn ent=1.282 -
+    TX 3 (19 bins): width_gate_fail
+    TX 4 (438 bins): width_gate_fail
+  File 2/32: SpectrumBands_203_2320_dab_Ita_203_232.npy (203-2320MHz)
+    TX 1 (142 bins): dab ent=0.053 +
+    TX 2 (27 bins): width_gate_fail
+    TX 3 (553 bins): width_gate_fail
+    TX 4 (327 bins): width_gate_fail
+    TX 5 (60 bins): width_gate_fail
+    TX 6 (30 bins): width_gate_fail
+    TX 7 (114 bins): width_gate_fail
+    TX 8 (33 bins): width_gate_fail
+    TX 9 (25 bins): width_gate_fail
+    TX 10 (84 bins): width_gate_fail
+    TX 11 (367 bins): width_gate_fail
+    TX 12 (179 bins): dab ent=0.226 +
+    TX 13 (11 bins): width_gate_fail
+    TX 14 (17 bins): width_gate_fail
+    TX 15 (10 bins): width_gate_fail
+    TX 16 (11 bins): width_gate_fail
+    TX 17 (11 bins): width_gate_fail
+    TX 18 (11 bins): width_gate_fail
+    TX 19 (11 bins): width_gate_fail
+    TX 20 (11 bins): width_gate_fail
+    TX 21 (11 bins): width_gate_fail
+    TX 22 (11 bins): width_gate_fail
+    TX 23 (11 bins): width_gate_fail
+    TX 24 (12 bins): width_gate_fail
+    TX 25 (16 bins): width_gate_fail
+    TX 26 (11 bins): width_gate_fail
+    TX 27 (167 bins): dvbt ent=0.358 -
+    TX 28 (20 bins): width_gate_fail
+    TX 29 (34 bins): width_gate_fail
+    TX 30 (41 bins): width_gate_fail
+    TX 31 (65 bins): width_gate_fail
+    TX 32 (32 bins): width_gate_fail
+    TX 33 (256 bins): width_gate_fail
+    TX 34 (823 bins): width_gate_fail
+    TX 35 (387 bins): width_gate_fail
+    TX 36 (205 bins): dvbt ent=0.046 -
+    TX 37 (218 bins): dvbt ent=0.051 -
+    TX 38 (284 bins): width_gate_fail
+    TX 39 (528 bins): width_gate_fail
+    TX 40 (64 bins): width_gate_fail
+    TX 41 (11 bins): width_gate_fail
+    TX 42 (72 bins): width_gate_fail
+    TX 43 (192 bins): dvbt ent=0.188 -
+    TX 44 (198 bins): dvbt ent=0.075 -
+    TX 45 (170 bins): dvbt ent=0.496 -
+    TX 46 (426 bins): width_gate_fail
+    TX 47 (82 bins): width_gate_fail
+    TX 48 (66 bins): width_gate_fail
+    TX 49 (825 bins): width_gate_fail
+    TX 50 (34 bins): width_gate_fail
+    TX 51 (35 bins): width_gate_fail
+    TX 52 (171 bins): dvbt ent=0.177 -
+    TX 53 (127 bins): dab ent=0.195 +
+    TX 54 (83 bins): width_gate_fail
+    TX 55 (15 bins): width_gate_fail
+    TX 56 (39 bins): width_gate_fail
+    TX 57 (194 bins): dvbt ent=0.095 -
+    TX 58 (191 bins): dvbt ent=0.046 -
+    TX 59 (206 bins): dvbt ent=0.077 -
+    TX 60 (824 bins): width_gate_fail
+    TX 61 (824 bins): width_gate_fail
+    TX 62 (13 bins): width_gate_fail
+    TX 63 (821 bins): width_gate_fail
+    TX 64 (129 bins): dab ent=0.052 +
+    TX 65 (37 bins): width_gate_fail
+    TX 66 (212 bins): dvbt ent=0.113 -
+    TX 67 (428 bins): width_gate_fail
+    TX 68 (381 bins): width_gate_fail
+    TX 69 (70 bins): width_gate_fail
+    TX 70 (32 bins): width_gate_fail
+    TX 71 (34 bins): width_gate_fail
+    TX 72 (35 bins): width_gate_fail
+    TX 73 (823 bins): width_gate_fail
+    TX 74 (38 bins): width_gate_fail
+    TX 75 (69 bins): width_gate_fail
+    TX 76 (129 bins): dab ent=0.309 +
+    TX 77 (38 bins): width_gate_fail
+    TX 78 (18 bins): width_gate_fail
+    TX 79 (87 bins): width_gate_fail
+    TX 80 (38 bins): width_gate_fail
+    TX 81 (26 bins): width_gate_fail
+    TX 82 (148 bins): dab ent=0.322 +
+    TX 83 (162 bins): unkn ent=0.975 -
+    TX 84 (30 bins): width_gate_fail
+    TX 85 (100 bins): width_gate_fail
+    TX 86 (34 bins): width_gate_fail
+    TX 87 (122 bins): dab ent=0.374 +
+    TX 88 (37 bins): width_gate_fail
+    TX 89 (807 bins): width_gate_fail
+    TX 90 (11 bins): width_gate_fail
+    TX 91 (824 bins): width_gate_fail
+    TX 92 (998 bins): width_gate_fail
+    TX 93 (996 bins): width_gate_fail
+    TX 94 (29 bins): width_gate_fail
+    TX 95 (52 bins): width_gate_fail
+    TX 96 (32 bins): width_gate_fail
+    TX 97 (11 bins): width_gate_fail
+    TX 98 (31 bins): width_gate_fail
+    TX 99 (31 bins): width_gate_fail
+  File 3/32: SpectrumBands_180_195_dab_slv_180_196.npy (180-195MHz)
+    TX 1 (172 bins): unkn ent=1.285 -
+    TX 2 (12 bins): width_gate_fail
+    TX 3 (14 bins): width_gate_fail
+    TX 4 (176 bins): unkn ent=1.027 -
+  File 4/32: SpectrumBands_209_227_dab_Switz_209_227.npy (209-227MHz)
+    TX 1 (94 bins): width_gate_fail
+    TX 2 (175 bins): unkn ent=1.380 -
+  File 5/32: SpectrumBands_219_229_dab_ne_219_229.npy (219-229MHz)
+    TX 1 (50 bins): width_gate_fail
+    TX 2 (88 bins): width_gate_fail
+    TX 3 (37 bins): width_gate_fail
+  File 6/32: SpectrumBands_174_181_dab_ge_174_181.npy (174-181MHz)
+    TX 1 (136 bins): dab ent=0.057 +
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (28 bins): width_gate_fail
+  File 7/32: SpectrumBands_203_220_dab_ger_180_196.npy (203-220MHz)
+    TX 1 (659 bins): width_gate_fail
+    TX 2 (20 bins): width_gate_fail
+  File 8/32: SpectrumBands_210_226_dab_Swis_210_226.npy (210-226MHz)
+    TX 1 (175 bins): unkn ent=1.362 -
+    TX 2 (173 bins): unkn ent=1.351 -
+    TX 3 (176 bins): unkn ent=0.980 -
+  File 9/32: SpectrumBands_213_231_dab_ita_213_231.npy (213-231MHz)
+    TX 1 (172 bins): unkn ent=1.284 -
+    TX 2 (85 bins): width_gate_fail
+    TX 3 (49 bins): width_gate_fail
+    TX 4 (33 bins): width_gate_fail
+    TX 5 (175 bins): dab ent=0.679 +
+    TX 6 (167 bins): unkn ent=0.989 -
+    TX 7 (11 bins): width_gate_fail
+  File 10/32: SpectrumBands_173_218_dab_cz_173_218.npy (173-218MHz)
+    TX 1 (174 bins): unkn ent=0.913 -
+    TX 2 (183 bins): dab ent=0.207 +
+    TX 3 (13 bins): width_gate_fail
+    TX 4 (169 bins): unkn ent=0.988 -
+    TX 5 (174 bins): unkn ent=0.985 -
+  File 11/32: SpectrumBands_176_199_dab_Ger_176_199.npy (176-199MHz)
+    TX 1 (17 bins): width_gate_fail
+    TX 2 (106 bins): width_gate_fail
+    TX 3 (172 bins): unkn ent=0.995 -
+    TX 4 (146 bins): dab ent=0.084 +
+    TX 5 (171 bins): unkn ent=1.003 -
+  File 12/32: SpectrumBands_222_230_dab_Ita_222_230.npy (222-230MHz)
+    TX 1 (38 bins): width_gate_fail
+    TX 2 (13 bins): width_gate_fail
+    TX 3 (20 bins): width_gate_fail
+    TX 4 (60 bins): width_gate_fail
+    TX 5 (37 bins): width_gate_fail
+    TX 6 (12 bins): width_gate_fail
+    TX 7 (15 bins): width_gate_fail
+  File 13/32: SpectrumBands_209_225_dab_Swis_209_225.npy (209-225MHz)
+    TX 1 (317 bins): width_gate_fail
+    TX 2 (51 bins): width_gate_fail
+    TX 3 (176 bins): unkn ent=1.087 -
+  File 14/32: SpectrumBands_194_228_dab_Esp_194_228.npy (194-228MHz)
+    TX 1 (176 bins): unkn ent=0.944 -
+    TX 2 (173 bins): dab ent=0.310 +
+    TX 3 (65 bins): width_gate_fail
+    TX 4 (176 bins): dab ent=0.546 +
+    TX 5 (438 bins): width_gate_fail
+    TX 6 (175 bins): unkn ent=1.091 -
+  File 15/32: SpectrumBands_225_239_dab_no_225_239.npy (225-239MHz)
+    TX 1 (438 bins): width_gate_fail
+    TX 2 (170 bins): unkn ent=1.116 -
+    TX 3 (29 bins): width_gate_fail
+    TX 4 (172 bins): dab ent=0.315 +
+  File 16/32: SpectrumBands_208_229_dab_Esp_208_229.npy (208-229MHz)
+    TX 1 (98 bins): width_gate_fail
+    TX 2 (175 bins): unkn ent=0.973 -
+  File 17/32: SpectrumBands_220_225_dab_Switz_220_225.npy (220-225MHz)
+  File 18/32: SpectrumBands_225_233_dab_Switz_225_233.npy (225-233MHz)
+    TX 1 (174 bins): unkn ent=0.785 -
+  File 19/32: SpectrumBands_204_208_dab_Cro_204_208.npy (204-208MHz)
+    TX 1 (173 bins): unkn ent=1.072 -
+  File 20/32: SpectrumBands_195_230_dab_alcorcon_195_230.npy (195-230MHz)
+    TX 1 (16 bins): width_gate_fail
+    TX 2 (39 bins): width_gate_fail
+    TX 3 (28 bins): width_gate_fail
+    TX 4 (17 bins): width_gate_fail
+    TX 5 (17 bins): width_gate_fail
+    TX 6 (18 bins): width_gate_fail
+    TX 7 (17 bins): width_gate_fail
+    TX 8 (15 bins): width_gate_fail
+    TX 9 (17 bins): width_gate_fail
+    TX 10 (71 bins): width_gate_fail
+    TX 11 (90 bins): width_gate_fail
+    TX 12 (13 bins): width_gate_fail
+    TX 13 (12 bins): width_gate_fail
+    TX 14 (20 bins): width_gate_fail
+    TX 15 (16 bins): width_gate_fail
+    TX 16 (27 bins): width_gate_fail
+    TX 17 (19 bins): width_gate_fail
+    TX 18 (12 bins): width_gate_fail
+    TX 19 (17 bins): width_gate_fail
+    TX 20 (16 bins): width_gate_fail
+    TX 21 (18 bins): width_gate_fail
+    TX 22 (18 bins): width_gate_fail
+    TX 23 (18 bins): width_gate_fail
+  File 21/32: alcorcon_Feb_2_21SpectrumBands_195_230_dab_alcorcon_195_230.npy (195-230MHz)
+    TX 1 (39 bins): width_gate_fail
+    TX 2 (29 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (17 bins): width_gate_fail
+    TX 6 (17 bins): width_gate_fail
+    TX 7 (17 bins): width_gate_fail
+    TX 8 (17 bins): width_gate_fail
+    TX 9 (15 bins): width_gate_fail
+    TX 10 (17 bins): width_gate_fail
+    TX 11 (71 bins): width_gate_fail
+    TX 12 (92 bins): width_gate_fail
+    TX 13 (14 bins): width_gate_fail
+    TX 14 (13 bins): width_gate_fail
+    TX 15 (21 bins): width_gate_fail
+    TX 16 (16 bins): width_gate_fail
+    TX 17 (27 bins): width_gate_fail
+    TX 18 (19 bins): width_gate_fail
+    TX 19 (12 bins): width_gate_fail
+    TX 20 (17 bins): width_gate_fail
+    TX 21 (16 bins): width_gate_fail
+    TX 22 (11 bins): width_gate_fail
+    TX 23 (18 bins): width_gate_fail
+    TX 24 (18 bins): width_gate_fail
+    TX 25 (17 bins): width_gate_fail
+  File 22/32: alcorcon_Feb_3_21SpectrumBands_195_230_dab_alcorcon_195_230.npy (195-230MHz)
+    TX 1 (75 bins): width_gate_fail
+    TX 2 (13 bins): width_gate_fail
+    TX 3 (17 bins): width_gate_fail
+    TX 4 (17 bins): width_gate_fail
+    TX 5 (18 bins): width_gate_fail
+    TX 6 (17 bins): width_gate_fail
+    TX 7 (15 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+    TX 9 (17 bins): width_gate_fail
+    TX 10 (72 bins): width_gate_fail
+    TX 11 (94 bins): width_gate_fail
+    TX 12 (14 bins): width_gate_fail
+    TX 13 (12 bins): width_gate_fail
+    TX 14 (20 bins): width_gate_fail
+    TX 15 (16 bins): width_gate_fail
+    TX 16 (27 bins): width_gate_fail
+    TX 17 (19 bins): width_gate_fail
+    TX 18 (12 bins): width_gate_fail
+    TX 19 (17 bins): width_gate_fail
+    TX 20 (16 bins): width_gate_fail
+    TX 21 (18 bins): width_gate_fail
+    TX 22 (17 bins): width_gate_fail
+    TX 23 (11 bins): width_gate_fail
+    TX 24 (17 bins): width_gate_fail
+  File 23/32: SpectrumBands_187_228_dab_Swis_187_228.npy (187-228MHz)
+    TX 1 (173 bins): dab ent=0.676 +
+    TX 2 (175 bins): unkn ent=1.179 -
+    TX 3 (173 bins): unkn ent=1.194 -
+    TX 4 (177 bins): unkn ent=1.151 -
+  File 24/32: SpectrumBands_191_220_dab_Esp_191_220.npy (191-220MHz)
+    TX 1 (173 bins): unkn ent=1.118 -
+    TX 2 (171 bins): unkn ent=1.568 -
+    TX 3 (99 bins): width_gate_fail
+  File 25/32: SpectrumBands_208_229_dab_Swis_208_229.npy (208-229MHz)
+    TX 1 (88 bins): width_gate_fail
+    TX 2 (83 bins): width_gate_fail
+    TX 3 (174 bins): unkn ent=1.144 -
+    TX 4 (177 bins): dab ent=0.279 +
+  File 26/32: SpectrumBands_203_223_dab_Ger_203_223.npy (203-223MHz)
+    TX 1 (172 bins): unkn ent=1.071 -
+    TX 2 (174 bins): unkn ent=1.362 -
+    TX 3 (175 bins): dab ent=0.616 +
+  File 27/32: SpectrumBands_194_203_dab_Esp_194_203.npy (194-203MHz)
+    TX 1 (176 bins): unkn ent=0.944 -
+    TX 2 (173 bins): dab ent=0.310 +
+  File 28/32: SpectrumBands_200_230_dab_oh_200_230.npy (200-230MHz)
+    TX 1 (172 bins): unkn ent=1.377 -
+    TX 2 (174 bins): unkn ent=0.947 -
+    TX 3 (176 bins): unkn ent=1.398 -
+    TX 4 (72 bins): width_gate_fail
+    TX 5 (97 bins): width_gate_fail
+    TX 6 (175 bins): unkn ent=1.315 -
+    TX 7 (121 bins): dab ent=0.150 +
+    TX 8 (48 bins): width_gate_fail
+    TX 9 (175 bins): unkn ent=1.318 -
+  File 29/32: SpectrumBands_200_230_dab_oh_200_230.npy (200-230MHz)
+    TX 1 (172 bins): unkn ent=1.377 -
+    TX 2 (174 bins): unkn ent=0.947 -
+    TX 3 (176 bins): unkn ent=1.398 -
+    TX 4 (72 bins): width_gate_fail
+    TX 5 (97 bins): width_gate_fail
+    TX 6 (175 bins): unkn ent=1.315 -
+    TX 7 (121 bins): dab ent=0.150 +
+    TX 8 (48 bins): width_gate_fail
+    TX 9 (175 bins): unkn ent=1.318 -
+  File 30/32: SpectrumBands_201_207_dab_scalessio_201_207.npy (201-207MHz)
+    TX 1 (106 bins): width_gate_fail
+  File 31/32: SpectrumBands_201_207_dab_scalessio_201_207.npy (201-207MHz)
+    TX 1 (108 bins): width_gate_fail
+  File 32/32: SpectrumBands_208_216_dab_sw_208_216.npy (208-216MHz)
+    TX 1 (172 bins): unkn ent=1.373 -
+    TX 2 (175 bins): unkn ent=1.017 -
+    TX 3 (124 bins): dab ent=0.196 +
+    TX 4 (26 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+
+============================================================
+Processing DVBT files... (34 files)
+============================================================
+  File 1/34: SpectrumBands_542_582_dvbt_Swis_542_582.npy (542-582MHz)
+    TX 1 (826 bins): lte ent=0.391 -
+    TX 2 (503 bins): dvbt ent=0.180 +
+    TX 3 (300 bins): width_gate_fail
+  File 2/34: SpectrumBands_515_561_dvbt_bu_515_561.npy (515-561MHz)
+    TX 1 (829 bins): lte ent=0.583 -
+    TX 2 (168 bins): width_gate_fail
+    TX 3 (135 bins): width_gate_fail
+  File 3/34: SpectrumBands_540_649_dvbt_Ita_540_649.npy (540-649MHz)
+    TX 1 (83 bins): width_gate_fail
+    TX 2 (121 bins): width_gate_fail
+    TX 3 (36 bins): width_gate_fail
+    TX 4 (21 bins): width_gate_fail
+    TX 5 (31 bins): width_gate_fail
+    TX 6 (47 bins): width_gate_fail
+    TX 7 (205 bins): width_gate_fail
+    TX 8 (89 bins): width_gate_fail
+    TX 9 (23 bins): width_gate_fail
+    TX 10 (22 bins): width_gate_fail
+    TX 11 (52 bins): width_gate_fail
+    TX 12 (25 bins): width_gate_fail
+    TX 13 (30 bins): width_gate_fail
+    TX 14 (24 bins): width_gate_fail
+    TX 15 (21 bins): width_gate_fail
+    TX 16 (46 bins): width_gate_fail
+    TX 17 (26 bins): width_gate_fail
+    TX 18 (48 bins): width_gate_fail
+    TX 19 (273 bins): width_gate_fail
+    TX 20 (421 bins): dvbt ent=0.180 +
+    TX 21 (384 bins): width_gate_fail
+    TX 22 (427 bins): dvbt ent=0.047 +
+    TX 23 (602 bins): dvbt ent=0.048 +
+    TX 24 (45 bins): width_gate_fail
+    TX 25 (11 bins): width_gate_fail
+    TX 26 (15 bins): width_gate_fail
+    TX 27 (12 bins): width_gate_fail
+    TX 28 (23 bins): width_gate_fail
+    TX 29 (191 bins): width_gate_fail
+    TX 30 (27 bins): width_gate_fail
+    TX 31 (52 bins): width_gate_fail
+    TX 32 (15 bins): width_gate_fail
+    TX 33 (33 bins): width_gate_fail
+    TX 34 (32 bins): width_gate_fail
+  File 4/34: SpectrumBands_557_615_dvbt_slv_557_615.npy (557-615MHz)
+    TX 1 (827 bins): unkn ent=0.813 -
+    TX 2 (827 bins): dvbt ent=0.374 +
+  File 5/34: SpectrumBands_636_695_dvbt_ne_636_695.npy (636-695MHz)
+    TX 1 (216 bins): width_gate_fail
+    TX 2 (58 bins): width_gate_fail
+    TX 3 (417 bins): dvbt ent=0.215 +
+    TX 4 (14 bins): width_gate_fail
+  File 6/34: SpectrumBands_557_590_dvbt_ge_557_590.npy (557-590MHz)
+    TX 1 (64 bins): width_gate_fail
+    TX 2 (418 bins): dvbt ent=0.052 +
+    TX 3 (484 bins): dvbt ent=0.089 +
+    TX 4 (66 bins): width_gate_fail
+    TX 5 (11 bins): width_gate_fail
+    TX 6 (605 bins): dvbt ent=0.110 +
+    TX 7 (14 bins): width_gate_fail
+  File 7/34: SpectrumBands_468_530_dvbt_ger_468_530.npy (468-530MHz)
+    TX 1 (845 bins): lte ent=0.214 -
+    TX 2 (846 bins): lte ent=0.640 -
+    TX 3 (844 bins): lte ent=0.292 -
+  File 8/34: SpectrumBands_464_505_dvbt_Swis_464_505.npy (464-505MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (45 bins): width_gate_fail
+    TX 3 (17 bins): width_gate_fail
+    TX 4 (26 bins): width_gate_fail
+    TX 5 (14 bins): width_gate_fail
+    TX 6 (26 bins): width_gate_fail
+    TX 7 (16 bins): width_gate_fail
+    TX 8 (32 bins): width_gate_fail
+    TX 9 (97 bins): width_gate_fail
+    TX 10 (10 bins): width_gate_fail
+    TX 11 (59 bins): width_gate_fail
+  File 9/34: SpectrumBands_620_686_dvbt_ita_620_686.npy (620-686MHz)
+    TX 1 (167 bins): width_gate_fail
+    TX 2 (69 bins): width_gate_fail
+    TX 3 (30 bins): width_gate_fail
+    TX 4 (14 bins): width_gate_fail
+    TX 5 (23 bins): width_gate_fail
+    TX 6 (18 bins): width_gate_fail
+    TX 7 (15 bins): width_gate_fail
+    TX 8 (23 bins): width_gate_fail
+    TX 9 (57 bins): width_gate_fail
+    TX 10 (197 bins): width_gate_fail
+    TX 11 (21 bins): width_gate_fail
+    TX 12 (73 bins): width_gate_fail
+    TX 13 (55 bins): width_gate_fail
+    TX 14 (16 bins): width_gate_fail
+    TX 15 (11 bins): width_gate_fail
+    TX 16 (15 bins): width_gate_fail
+    TX 17 (36 bins): width_gate_fail
+    TX 18 (48 bins): width_gate_fail
+  Error loading SpectrumBands_484_419_dvbt_cz_484_519.npy: index -1 is out of bounds for axis 0 with size 0
+  File 10/34: SpectrumBands_484_419_dvbt_cz_484_519.npy (484-419MHz)
+  File 11/34: SpectrumBands_637_646_dvbt_czk_637_646.npy (637-646MHz)
+    TX 1 (14 bins): width_gate_fail
+    TX 2 (18 bins): width_gate_fail
+    TX 3 (14 bins): width_gate_fail
+    TX 4 (12 bins): width_gate_fail
+    TX 5 (28 bins): width_gate_fail
+    TX 6 (12 bins): width_gate_fail
+    TX 7 (11 bins): width_gate_fail
+    TX 8 (11 bins): width_gate_fail
+  File 12/34: SpectrumBands_518_561_dvbt_Jap_518_561.npy (518-561MHz)
+    TX 1 (55 bins): width_gate_fail
+    TX 2 (22 bins): width_gate_fail
+    TX 3 (51 bins): width_gate_fail
+    TX 4 (19 bins): width_gate_fail
+    TX 5 (28 bins): width_gate_fail
+    TX 6 (17 bins): width_gate_fail
+    TX 7 (38 bins): width_gate_fail
+    TX 8 (38 bins): width_gate_fail
+    TX 9 (16 bins): width_gate_fail
+    TX 10 (89 bins): width_gate_fail
+    TX 11 (42 bins): width_gate_fail
+    TX 12 (18 bins): width_gate_fail
+    TX 13 (23 bins): width_gate_fail
+    TX 14 (23 bins): width_gate_fail
+    TX 15 (39 bins): width_gate_fail
+  File 13/34: SpectrumBands_580_656_dvbt_Ger_580_656.npy (580-656MHz)
+    TX 1 (846 bins): lte ent=0.416 -
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (844 bins): lte ent=0.528 -
+  File 14/34: SpectrumBands_573_630_dvbt_po_573_630.npy (573-630MHz)
+    TX 1 (72 bins): width_gate_fail
+    TX 2 (826 bins): lte ent=0.208 -
+    TX 3 (825 bins): lte ent=0.186 -
+    TX 4 (828 bins): lte ent=0.593 -
+  File 15/34: SpectrumBands_468_571_dvbt_Ita_468_571.npy (468-571MHz)
+    TX 1 (361 bins): width_gate_fail
+    TX 2 (201 bins): width_gate_fail
+    TX 3 (212 bins): width_gate_fail
+    TX 4 (606 bins): lte ent=0.615 -
+    TX 5 (214 bins): width_gate_fail
+    TX 6 (22 bins): width_gate_fail
+    TX 7 (34 bins): width_gate_fail
+    TX 8 (28 bins): width_gate_fail
+    TX 9 (16 bins): width_gate_fail
+    TX 10 (34 bins): width_gate_fail
+    TX 11 (13 bins): width_gate_fail
+    TX 12 (32 bins): width_gate_fail
+    TX 13 (33 bins): width_gate_fail
+    TX 14 (15 bins): width_gate_fail
+    TX 15 (15 bins): width_gate_fail
+    TX 16 (48 bins): width_gate_fail
+    TX 17 (47 bins): width_gate_fail
+    TX 18 (65 bins): width_gate_fail
+    TX 19 (34 bins): width_gate_fail
+    TX 20 (31 bins): width_gate_fail
+    TX 21 (20 bins): width_gate_fail
+    TX 22 (12 bins): width_gate_fail
+    TX 23 (24 bins): width_gate_fail
+    TX 24 (30 bins): width_gate_fail
+    TX 25 (14 bins): width_gate_fail
+    TX 26 (216 bins): width_gate_fail
+    TX 27 (30 bins): width_gate_fail
+    TX 28 (20 bins): width_gate_fail
+    TX 29 (25 bins): width_gate_fail
+    TX 30 (30 bins): width_gate_fail
+    TX 31 (19 bins): width_gate_fail
+    TX 32 (26 bins): width_gate_fail
+    TX 33 (16 bins): width_gate_fail
+    TX 34 (43 bins): width_gate_fail
+    TX 35 (32 bins): width_gate_fail
+    TX 36 (20 bins): width_gate_fail
+    TX 37 (15 bins): width_gate_fail
+    TX 38 (14 bins): width_gate_fail
+    TX 39 (22 bins): width_gate_fail
+    TX 40 (27 bins): width_gate_fail
+    TX 41 (25 bins): width_gate_fail
+    TX 42 (27 bins): width_gate_fail
+    TX 43 (18 bins): width_gate_fail
+    TX 44 (67 bins): width_gate_fail
+    TX 45 (32 bins): width_gate_fail
+    TX 46 (37 bins): width_gate_fail
+    TX 47 (16 bins): width_gate_fail
+    TX 48 (67 bins): width_gate_fail
+  File 16/34: SpectrumBands_667_670_dvbt_Pol_667_670.npy (667-670MHz)
+  File 17/34: SpectrumBands_775_790_dvbt_rus_775_790.npy (775-790MHz)
+    TX 1 (843 bins): unkn ent=1.001 -
+  File 18/34: SpectrumBands_473_535_dvbt_Esp_473_535.npy (473-535MHz)
+    TX 1 (824 bins): lte ent=0.149 -
+    TX 2 (617 bins): dvbt ent=0.580 +
+    TX 3 (193 bins): width_gate_fail
+    TX 4 (823 bins): unkn ent=0.812 -
+  File 19/34: SpectrumBands_524_606_dvbt_no_524_606.npy (524-606MHz)
+    TX 1 (11 bins): width_gate_fail
+    TX 2 (18 bins): width_gate_fail
+    TX 3 (18 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (50 bins): width_gate_fail
+    TX 6 (95 bins): width_gate_fail
+    TX 7 (30 bins): width_gate_fail
+    TX 8 (38 bins): width_gate_fail
+    TX 9 (22 bins): width_gate_fail
+    TX 10 (12 bins): width_gate_fail
+    TX 11 (30 bins): width_gate_fail
+    TX 12 (12 bins): width_gate_fail
+    TX 13 (25 bins): width_gate_fail
+    TX 14 (15 bins): width_gate_fail
+    TX 15 (19 bins): width_gate_fail
+    TX 16 (16 bins): width_gate_fail
+    TX 17 (17 bins): width_gate_fail
+    TX 18 (13 bins): width_gate_fail
+    TX 19 (72 bins): width_gate_fail
+    TX 20 (26 bins): width_gate_fail
+    TX 21 (13 bins): width_gate_fail
+    TX 22 (14 bins): width_gate_fail
+    TX 23 (18 bins): width_gate_fail
+    TX 24 (15 bins): width_gate_fail
+    TX 25 (23 bins): width_gate_fail
+    TX 26 (15 bins): width_gate_fail
+    TX 27 (12 bins): width_gate_fail
+    TX 28 (16 bins): width_gate_fail
+    TX 29 (30 bins): width_gate_fail
+    TX 30 (59 bins): width_gate_fail
+    TX 31 (60 bins): width_gate_fail
+    TX 32 (11 bins): width_gate_fail
+    TX 33 (28 bins): width_gate_fail
+    TX 34 (17 bins): width_gate_fail
+    TX 35 (11 bins): width_gate_fail
+    TX 36 (38 bins): width_gate_fail
+    TX 37 (37 bins): width_gate_fail
+    TX 38 (11 bins): width_gate_fail
+    TX 39 (15 bins): width_gate_fail
+    TX 40 (124 bins): width_gate_fail
+  File 20/34: SpectrumBands_475_555_dvbt_Esp_475_555.npy (475-555MHz)
+    TX 1 (825 bins): unkn ent=0.761 -
+    TX 2 (11 bins): width_gate_fail
+    TX 3 (16 bins): width_gate_fail
+    TX 4 (16 bins): width_gate_fail
+    TX 5 (17 bins): width_gate_fail
+    TX 6 (43 bins): width_gate_fail
+    TX 7 (14 bins): width_gate_fail
+    TX 8 (25 bins): width_gate_fail
+    TX 9 (19 bins): width_gate_fail
+    TX 10 (23 bins): width_gate_fail
+    TX 11 (18 bins): width_gate_fail
+    TX 12 (81 bins): width_gate_fail
+    TX 13 (71 bins): width_gate_fail
+    TX 14 (65 bins): width_gate_fail
+    TX 15 (38 bins): width_gate_fail
+    TX 16 (40 bins): width_gate_fail
+    TX 17 (11 bins): width_gate_fail
+    TX 18 (15 bins): width_gate_fail
+    TX 19 (12 bins): width_gate_fail
+    TX 20 (38 bins): width_gate_fail
+    TX 21 (201 bins): width_gate_fail
+    TX 22 (207 bins): width_gate_fail
+    TX 23 (211 bins): width_gate_fail
+    TX 24 (821 bins): dvbt ent=0.250 +
+    TX 25 (70 bins): width_gate_fail
+    TX 26 (62 bins): width_gate_fail
+    TX 27 (121 bins): width_gate_fail
+    TX 28 (79 bins): width_gate_fail
+    TX 29 (193 bins): width_gate_fail
+    TX 30 (61 bins): width_gate_fail
+    TX 31 (94 bins): width_gate_fail
+    TX 32 (29 bins): width_gate_fail
+    TX 33 (15 bins): width_gate_fail
+    TX 34 (19 bins): width_gate_fail
+    TX 35 (24 bins): width_gate_fail
+    TX 36 (38 bins): width_gate_fail
+    TX 37 (22 bins): width_gate_fail
+    TX 38 (193 bins): width_gate_fail
+  File 21/34: SpectrumBands_475_538_dvbt_Cro_475_538.npy (475-538MHz)
+    TX 1 (16 bins): width_gate_fail
+    TX 2 (99 bins): width_gate_fail
+    TX 3 (588 bins): dvbt ent=0.097 +
+    TX 4 (530 bins): lte ent=0.257 -
+    TX 5 (282 bins): width_gate_fail
+    TX 6 (23 bins): width_gate_fail
+    TX 7 (425 bins): dvbt ent=0.165 +
+  File 22/34: SpectrumBands_540_584_dvbt_alcorcon_540_5845.npy (540-584MHz)
+    TX 1 (820 bins): lte ent=0.389 -
+    TX 2 (17 bins): width_gate_fail
+    TX 3 (28 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (32 bins): width_gate_fail
+    TX 6 (37 bins): width_gate_fail
+    TX 7 (38 bins): width_gate_fail
+    TX 8 (27 bins): width_gate_fail
+    TX 9 (23 bins): width_gate_fail
+    TX 10 (37 bins): width_gate_fail
+    TX 11 (34 bins): width_gate_fail
+    TX 12 (89 bins): width_gate_fail
+    TX 13 (20 bins): width_gate_fail
+    TX 14 (63 bins): width_gate_fail
+    TX 15 (16 bins): width_gate_fail
+    TX 16 (23 bins): width_gate_fail
+    TX 17 (45 bins): width_gate_fail
+    TX 18 (50 bins): width_gate_fail
+    TX 19 (75 bins): width_gate_fail
+    TX 20 (29 bins): width_gate_fail
+    TX 21 (66 bins): width_gate_fail
+    TX 22 (23 bins): width_gate_fail
+    TX 23 (35 bins): width_gate_fail
+    TX 24 (122 bins): width_gate_fail
+    TX 25 (77 bins): width_gate_fail
+    TX 26 (198 bins): width_gate_fail
+    TX 27 (128 bins): width_gate_fail
+    TX 28 (70 bins): width_gate_fail
+  File 23/34: alcorcon_Feb_2_21SpectrumBands_540_584_dvbt_alcorcon_540_5845.npy (540-584MHz)
+    TX 1 (821 bins): lte ent=0.357 -
+    TX 2 (22 bins): width_gate_fail
+    TX 3 (28 bins): width_gate_fail
+    TX 4 (17 bins): width_gate_fail
+    TX 5 (17 bins): width_gate_fail
+    TX 6 (16 bins): width_gate_fail
+    TX 7 (29 bins): width_gate_fail
+    TX 8 (46 bins): width_gate_fail
+    TX 9 (11 bins): width_gate_fail
+    TX 10 (28 bins): width_gate_fail
+    TX 11 (43 bins): width_gate_fail
+    TX 12 (45 bins): width_gate_fail
+    TX 13 (101 bins): width_gate_fail
+    TX 14 (45 bins): width_gate_fail
+    TX 15 (149 bins): width_gate_fail
+    TX 16 (199 bins): width_gate_fail
+    TX 17 (100 bins): width_gate_fail
+    TX 18 (67 bins): width_gate_fail
+    TX 19 (205 bins): width_gate_fail
+    TX 20 (203 bins): width_gate_fail
+    TX 21 (200 bins): width_gate_fail
+  File 24/34: alcorcon_Feb_3_21SpectrumBands_540_584_dvbt_alcorcon_540_5845.npy (540-584MHz)
+    TX 1 (822 bins): lte ent=0.242 -
+    TX 2 (13 bins): width_gate_fail
+    TX 3 (20 bins): width_gate_fail
+    TX 4 (22 bins): width_gate_fail
+    TX 5 (24 bins): width_gate_fail
+    TX 6 (22 bins): width_gate_fail
+    TX 7 (16 bins): width_gate_fail
+    TX 8 (30 bins): width_gate_fail
+    TX 9 (17 bins): width_gate_fail
+    TX 10 (15 bins): width_gate_fail
+    TX 11 (14 bins): width_gate_fail
+    TX 12 (29 bins): width_gate_fail
+    TX 13 (38 bins): width_gate_fail
+    TX 14 (34 bins): width_gate_fail
+    TX 15 (37 bins): width_gate_fail
+    TX 16 (53 bins): width_gate_fail
+    TX 17 (13 bins): width_gate_fail
+    TX 18 (85 bins): width_gate_fail
+    TX 19 (12 bins): width_gate_fail
+    TX 20 (68 bins): width_gate_fail
+    TX 21 (58 bins): width_gate_fail
+    TX 22 (63 bins): width_gate_fail
+    TX 23 (115 bins): width_gate_fail
+    TX 24 (147 bins): width_gate_fail
+    TX 25 (119 bins): width_gate_fail
+    TX 26 (79 bins): width_gate_fail
+    TX 27 (190 bins): width_gate_fail
+    TX 28 (117 bins): width_gate_fail
+    TX 29 (69 bins): width_gate_fail
+  File 25/34: SpectrumBands_484_543_dvbt_Esp_484_583.npy (484-543MHz)
+    TX 1 (127 bins): width_gate_fail
+    TX 2 (46 bins): width_gate_fail
+    TX 3 (648 bins): unkn ent=0.991 -
+    TX 4 (11 bins): width_gate_fail
+    TX 5 (395 bins): width_gate_fail
+    TX 6 (299 bins): width_gate_fail
+    TX 7 (821 bins): unkn ent=0.924 -
+    TX 8 (101 bins): width_gate_fail
+    TX 9 (577 bins): unkn ent=1.012 -
+    TX 10 (20 bins): width_gate_fail
+    TX 11 (24 bins): width_gate_fail
+    TX 12 (42 bins): width_gate_fail
+  File 26/34: SpectrumBands_620_630_dvbt_Esp_620_630.npy (620-630MHz)
+    TX 1 (190 bins): width_gate_fail
+    TX 2 (23 bins): width_gate_fail
+  File 27/34: SpectrumBands_540_584_dvbt_rack3_540_5845.npy (540-584MHz)
+    TX 1 (822 bins): dvbt ent=0.161 +
+    TX 2 (469 bins): dvbt ent=0.091 +
+    TX 3 (73 bins): width_gate_fail
+    TX 4 (59 bins): width_gate_fail
+    TX 5 (56 bins): width_gate_fail
+    TX 6 (121 bins): width_gate_fail
+    TX 7 (31 bins): width_gate_fail
+    TX 8 (228 bins): width_gate_fail
+    TX 9 (24 bins): width_gate_fail
+    TX 10 (76 bins): width_gate_fail
+    TX 11 (57 bins): width_gate_fail
+    TX 12 (60 bins): width_gate_fail
+    TX 13 (58 bins): width_gate_fail
+  File 28/34: SpectrumBands_540_584_dvbt_rack3_540_5845.npy (540-584MHz)
+  File 29/34: SpectrumBands_636_644_dvbt_Esp_636_644.npy (636-644MHz)
+  File 30/34: SpectrumBands_468_527_dvbt_oh_468_527.npy (468-527MHz)
+    TX 1 (825 bins): lte ent=0.567 -
+    TX 2 (821 bins): dvbt ent=0.204 +
+    TX 3 (149 bins): width_gate_fail
+    TX 4 (669 bins): dvbt ent=0.578 +
+  File 31/34: SpectrumBands_468_527_dvbt_oh_468_527.npy (468-527MHz)
+    TX 1 (825 bins): unkn ent=0.890 -
+    TX 2 (799 bins): dvbt ent=0.486 +
+    TX 3 (19 bins): width_gate_fail
+    TX 4 (124 bins): width_gate_fail
+    TX 5 (673 bins): unkn ent=0.932 -
+  File 32/34: SpectrumBands_509_550_dvbt_scalessio_509_550.npy (509-550MHz)
+    TX 1 (391 bins): width_gate_fail
+    TX 2 (62 bins): width_gate_fail
+    TX 3 (11 bins): width_gate_fail
+    TX 4 (19 bins): width_gate_fail
+    TX 5 (205 bins): width_gate_fail
+    TX 6 (12 bins): width_gate_fail
+    TX 7 (17 bins): width_gate_fail
+    TX 8 (561 bins): unkn ent=0.775 -
+  File 33/34: SpectrumBands_509_550_dvbt_scalessio_509_550.npy (509-550MHz)
+    TX 1 (539 bins): dvbt ent=0.131 +
+    TX 2 (52 bins): width_gate_fail
+    TX 3 (205 bins): width_gate_fail
+    TX 4 (13 bins): width_gate_fail
+    TX 5 (90 bins): width_gate_fail
+    TX 6 (522 bins): dvbt ent=0.283 +
+  File 34/34: SpectrumBands_560_620_dvbt_fr_560_620.npy (560-620MHz)
+    TX 1 (583 bins): dvbt ent=0.258 +
+    TX 2 (47 bins): width_gate_fail
+    TX 3 (14 bins): width_gate_fail
+    TX 4 (49 bins): width_gate_fail
+    TX 5 (423 bins): dvbt ent=0.053 +
+    TX 6 (33 bins): width_gate_fail
+    TX 7 (742 bins): dvbt ent=0.239 +
+    TX 8 (822 bins): dvbt ent=0.271 +
+
+============================================================
+RESULTS (per-transmission)
+============================================================
+      FM: 310/812 = 38.2%
+   TETRA: 2/12 = 16.7%
+     LTE: 6/22 = 27.3%
+     GSM: 189/199 = 95.0%
+     DAB: 21/75 = 28.0%
+    DVBT: 24/51 = 47.1%
+
+--- Per-file accuracy (majority vote) ---
+      FM: 15/41 files = 36.6%
+   TETRA: 1/38 files = 2.6%
+     LTE: 4/41 files = 9.8%
+     GSM: 35/46 files = 76.1%
+     DAB: 1/32 files = 3.1%
+    DVBT: 8/34 files = 23.5%
+
+Confusion Matrix (predicted vs expected):
+               dab    dvbt      fm     gsm     lte   tetra
+       dab      21      11       0       0       0       0
+      dvbt       0      26       0       0      30       0
+        fm       9       2     310     231       1       0
+       gsm       0       0       1     189       0       0
+       lte       0       0       0       0       4       0
+     tetra       0       0       0       0       0       1
+
+Errors (1056 total):
+  width_gate_fail: 1054
+  too_narrow: 2
+
+Entropy stats: min=0.041 max=1.568 avg=0.429
+High entropy (>0.7): 330/1171 transmissions
