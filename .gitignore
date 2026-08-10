@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dataset (large files)
+dataset/
+
+# Derived results
+*.npy
+*.keras
+*.pkl
+*.png
+*.svg
