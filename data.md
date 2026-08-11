@@ -62,6 +62,65 @@ Run `python3 prepare_dataset.py --archive spectrum_bands.tar.gz --output-dir pre
 - `SpectrumBands_484_419_dvbt_cz_484_519.npy` (`450 x 0`)
 - `SpectrumBands_770_80_lte_Jap_770_803.npy` (`445 x 0`)
 
+## Duplicate Sequence Analysis
+
+### Identical File Pairs (Exact Byte-for-Byte Duplicates)
+
+| Group | Files | Sensors | Shape | Description |
+|-------|-------|---------|-------|-------------|
+| 1 | 3 | Britof, HuldOne, NFM-Electrosense-01 | Various (0 cols) | Empty files with identical hash |
+| 2 | 2 | Defcon1, EDLV | (426, 3226) | **LTE files are IDENTICAL** |
+| 3 | 2 | Skap_French_Riviera, imdea_adsb | (451, 3226) | **LTE files are IDENTICAL** |
+| 4 | 2 | oha_sense1 (Sep_1, Sep_5) | (451, 3226) | **DAB files are IDENTICAL** |
+
+**Impact:** 4 files are exact duplicates of other files. These should be deduplicated before training.
+
+### Cross-Sensor Same-Filename Files
+
+Many files share the same filename across different sensors (capturing the same frequency band). These are **NOT duplicates** - they contain different data from different locations:
+
+| Filename | Copies | Sensors | Different Data? |
+|----------|--------|---------|-----------------|
+| `SpectrumBands_791_821_lte_Esp_791_821.npy` | 6 | Skap, URJC1, bcn-L, donostia, imdea, miguel | Yes (different shapes/means) |
+| `SpectrumBands_734_768_lte_usa_734_768.npy` | 3 | Bandon_Oregon, Oreland, Princeton1 | Yes |
+| `SpectrumBands_86_110_fm_usa_86_110.npy` | 3 | Bandon_Oregon, Oreland, Princeton1 | Yes |
+| `SpectrumBands_791_821_lte_Swis_791_821.npy` | 3 | Geneva, Sensorix, dipolkurz | Yes |
+| `SpectrumBands_924_929_gsm_Esp_924_929.npy` | 3 | bcn-L, imdea, miguel | Yes |
+
+**Exception:** Skap_French_Riviera and imdea_adsb have **identical** LTE data (same file copied to two sensors).
+
+### Same-Sensor Multi-Date Files
+
+Some sensors have data from multiple dates. These are generally **different** (collected at different times):
+
+| Sensor | Files | Same Date? | Identical? |
+|--------|-------|------------|------------|
+| oha_sense1 | DAB (Sep_1, Sep_5) | Different dates | **IDENTICAL** (bug) |
+| oha_sense1 | DVB-T (Sep_1, Sep_5) | Different dates | Different (shape/mean differ) |
+| oha_sense1 | LTE (Sep_1, Sep_5) | Different dates | Different |
+| scalessio | All 6 techs (May_2, May_3) | Different dates | Different |
+| leganes_rack_3 | GSM/DVB-T (May_1, May_2) | Different dates | Different |
+| alcorcon1 | All techs (Feb_1, Feb_2, Feb_3) | Different dates | Different |
+
+### Within-File Duplicate Sequences
+
+**Result:** No duplicate columns (time segments) found within any file. Every PSD measurement in every file is unique.
+
+### Near-Duplicate Sequences (Correlation > 0.999)
+
+**Result:** No near-duplicate sequences found. All time segments within files are sufficiently different.
+
+### Summary of Duplicates
+
+| Type | Count | Impact |
+|------|-------|--------|
+| Exact file duplicates | 4 files | Remove before training |
+| Identical cross-sensor files | 1 pair (Skap/imdea) | Remove one |
+| Identical multi-date files | 1 pair (oha_sense1 DAB) | Remove one |
+| **Total unique files to remove** | **5 files** | Reduces dataset from 232 to 227 unique files |
+
+---
+
 ## Analysis Script
 
 Run `analyze_dataset.py --archive spectrum_bands.tar.gz` for the archive or `analyze_dataset.py --data-dir <directory>` for an extracted tree.
