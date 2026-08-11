@@ -1,0 +1,33 @@
+CONFUSION MATRIX COMPARISON (Expected → Predicted)
+===================================================================================================================
+                                    WITH GATES (Phase 4)                                    WITHOUT GATES (True Generalization)
+                           dab  dvbt   fm  gsm  lte  tetra                               dab  dvbt   fm  gsm  lte  tetra
+                    dab    49    5    0    0    2     0                            dab    72   16   19  171    9     0
+                   dvbt     0   17    0    0   28     0                           dvbt    36   38    3  253   43     0
+                     fm     5    1  493  218    1     0                             fm     7    1  493  220    3     0
+                    gsm     0    0    1  188    0     0                           gsm     7    2    3  300    2     0
+                    lte     0    0    0    0    3     0                           lte    10    3    0   31   15     0
+                  tetra     0    0    0    0    0     2                          tetra     1    0  121   30    1     2
+
+SUMMARY STATS
+===================================================================================================================
+                    WITH GATES                          WITHOUT GATES
+                    ─────────────────────────────────    ─────────────────────────────────
+Total classified:      1,040 (54.3% of detections)        1,916 (100% of detections)
+Overall accuracy:      72.3%                              47.3%
+Signals filtered:      876 (45.7%)                         0
+
+Per-class comparison:
+       Tech      With Gates     Without Gates    Δ (Gate Effect)
+       ────      ───────────    ─────────────    ─────────────
+       FM         68.7%          68.1%            -0.6%   (gate barely filters FM)
+       GSM        99.5%          95.5%            -4.0%   (gate filters some GSM outliers)
+       TETRA     100% (2/2)      3.2% (6/188)     -96.8%  (gate rejects 99% of TETRA)
+       LTE       100% (3/3)     13.5% (18/133)    -86.5%  (gate rejects 98% of LTE)
+       DAB       87.5%         26.4%             -61.1%  (gate rejects 64% of DAB)
+       DVB-T     37.8%         11.7%             -26.1%  (gate rejects 58% of DVB-T)
+
+KEY INSIGHT: Width gates require knowing the technology FIRST (cheating).
+Without gates = real deployment performance (~47%).
+With gates = best-case performance when tech is known (~72%).
+The 25% gap = cost of generalization.
