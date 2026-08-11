@@ -5,8 +5,16 @@ __pycache__/
 
 # Dataset (large files)
 dataset/
+data/opt/
+data/*.tar.gz
+spectrum_bands.tar.gz
 
 # Derived results
 *.npy
 *.keras
 *.pkl
+*.pt
+prepared_dataset/
+prepared_smoke/
+segment_counts/
+training_*/
