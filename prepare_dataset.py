@@ -639,6 +639,36 @@ def random_class_split(
     return assignments
 
 
+def pre_hop_random_split(
+    records: Sequence[Mapping[str, object]],
+    seed: int = RANDOM_SEED,
+    train_fraction: float = TRAIN_FRACTION,
+) -> np.ndarray:
+    """Stratify base PSD rows while keeping all of their hops together."""
+
+    assignments = np.full(len(records), "", dtype="U5")
+    by_class: dict[str, dict[str, list[int]]] = defaultdict(lambda: defaultdict(list))
+    for index, record in enumerate(records):
+        label = str(record["technology"])
+        base_id = str(record["pre_hop_segment_id"])
+        by_class[label][base_id].append(index)
+
+    rng = np.random.default_rng(seed)
+    for label in LABELS:
+        units = list(by_class[label].values())
+        if len(units) < 2:
+            raise ValueError(
+                f"Pre-hop split cannot contain {label} in both partitions: {len(units)} base segments"
+            )
+        units = [units[index] for index in rng.permutation(len(units))]
+        train_units = _train_size(len(units), train_fraction)
+        for unit_index, unit in enumerate(units):
+            assignments[unit] = "train" if unit_index < train_units else "test"
+
+    _validate_assignment_classes(records, assignments, "pre-hop random")
+    return assignments
+
+
 def _sensor_objective(
     test_counts: np.ndarray,
     totals: np.ndarray,
@@ -794,12 +824,14 @@ def assign_splits(
     seed: int = RANDOM_SEED,
     train_fraction: float = TRAIN_FRACTION,
 ) -> None:
-    """Add ``random_split`` and ``sensor_split`` fields to sample records."""
+    """Add sample-, pre-hop-, and sensor-level split fields."""
 
     random_assignments = random_class_split(records, seed, train_fraction)
+    pre_hop_assignments = pre_hop_random_split(records, seed, train_fraction)
     sensor_assignments = sensor_disjoint_split(records, seed, train_fraction)
     for index, record in enumerate(records):
         record["random_split"] = str(random_assignments[index])
+        record["pre_hop_random_split"] = str(pre_hop_assignments[index])
         record["sensor_split"] = str(sensor_assignments[index])
 
 
@@ -1084,7 +1116,12 @@ def prepare_dataset(
                                 "sensor": info.sensor,
                                 "sensor_group": groups.get(info.sensor, info.sensor),
                                 "payload_hash": info.payload_hash or "",
+                                "detection_index": detection_index,
                                 "time_row": int(row_index),
+                                "pre_hop_segment_id": (
+                                    f"{info.payload_hash or info.source_file}::"
+                                    f"{detection_index}::{int(row_index)}"
+                                ),
                                 "detected_start": detected_start,
                                 "detected_end": detected_end,
                                 "chunk_index": chunk_index,
@@ -1125,6 +1162,7 @@ def prepare_dataset(
     for file_index, file_row in enumerate(file_rows):
         file_segments = segments_by_file.get(file_index, [])
         random_values = {str(record["random_split"]) for record in file_segments}
+        pre_hop_values = {str(record["pre_hop_random_split"]) for record in file_segments}
         sensor_values = {str(record["sensor_split"]) for record in file_segments}
         file_row["random_split"] = next(iter(random_values)) if len(random_values) == 1 else (
             "mixed" if random_values else ""
@@ -1132,20 +1170,24 @@ def prepare_dataset(
         file_row["sensor_split"] = next(iter(sensor_values)) if len(sensor_values) == 1 else (
             "mixed" if sensor_values else ""
         )
+        file_row["pre_hop_random_split"] = next(iter(pre_hop_values)) if len(pre_hop_values) == 1 else (
+            "mixed" if pre_hop_values else ""
+        )
 
     np.save(output / "features.npy", all_features)
     (output / "feature_columns.json").write_text(json.dumps(feature_columns, indent=2) + "\n", encoding="utf-8")
     segment_fields = [
         "sample_index", "file_index", "source_file", "technology", "sensor", "sensor_group",
-        "payload_hash", "time_row", "detected_start", "detected_end", "chunk_index",
-        "chunk_start", "chunk_end", "chunk_width", "random_split", "sensor_split",
+        "payload_hash", "detection_index", "time_row", "pre_hop_segment_id",
+        "detected_start", "detected_end", "chunk_index", "chunk_start", "chunk_end",
+        "chunk_width", "random_split", "pre_hop_random_split", "sensor_split",
     ]
     _write_csv(output / "segments.csv", segment_rows, segment_fields)
     file_fields = [
         "file_index", "source_file", "technology", "sensor", "sensor_group", "payload_hash",
         "rows", "processed_rows", "frequency_bins", "noise_db", "detected_transmissions", "hopping_chunks",
         "discarded_partial_chunks", "samples", "status",
-        "random_split", "sensor_split",
+        "random_split", "pre_hop_random_split", "sensor_split",
     ]
     _write_csv(output / "files.csv", file_rows, file_fields)
     _write_csv(
@@ -1176,6 +1218,12 @@ def prepare_dataset(
             f"{label}:{split}": count
             for (label, split), count in Counter(
                 (row["technology"], row["random_split"]) for row in segment_rows
+            ).items()
+        },
+        "pre_hop_random_split_by_class": {
+            f"{label}:{split}": count
+            for (label, split), count in Counter(
+                (row["technology"], row["pre_hop_random_split"]) for row in segment_rows
             ).items()
         },
         "sensor_split_by_class": {
@@ -1211,6 +1259,7 @@ def prepare_dataset(
         },
         "split_rules": {
             "random": "class-stratified deterministic sample split; repeated exact payload units stay together",
+            "pre_hop_random": "class-stratified deterministic base-row split; all hopping chunks from a base row stay together",
             "sensor": "deterministic robust grouped search, approximately 80/20, linked duplicate sensors stay together",
             "train_fraction": TRAIN_FRACTION,
             "sensor_search_trials": SENSOR_SEARCH_TRIALS,

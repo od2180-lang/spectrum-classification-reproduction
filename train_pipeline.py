@@ -195,10 +195,11 @@ def load_artifacts(data_dir):
                 f"{segments_path} needs a class column named label, technology, or class"
             )
         random_split_column = _column_name(reader.fieldnames, ("random_split",))
+        pre_hop_split_column = _column_name(reader.fieldnames, ("pre_hop_random_split",))
         sensor_split_column = _column_name(reader.fieldnames, ("sensor_split",))
-        if random_split_column is None or sensor_split_column is None:
+        if random_split_column is None or pre_hop_split_column is None or sensor_split_column is None:
             raise ValueError(
-                f"{segments_path} must contain random_split and sensor_split columns"
+                f"{segments_path} must contain random_split, pre_hop_random_split, and sensor_split columns"
             )
 
         rows = [
@@ -220,6 +221,9 @@ def load_artifacts(data_dir):
     assignments = {
         "class_random": np.asarray(
             [str(row[random_split_column]).strip() for row in rows], dtype=object
+        ),
+        "pre_hop_random": np.asarray(
+            [str(row[pre_hop_split_column]).strip() for row in rows], dtype=object
         ),
         "sensor": np.asarray(
             [str(row[sensor_split_column]).strip() for row in rows], dtype=object
@@ -286,7 +290,7 @@ def make_splits(labels, sensors, assignments, split, seed):
     train_pool = indices[prepared == "train"]
     test_indices = indices[prepared == "test"]
     effective_split = split
-    test_stratified = split == "class_random"
+    test_stratified = split in {"class_random", "pre_hop_random"}
     if split == "sensor":
         if sensors is None or np.any(sensors == ""):
             raise ValueError("Prepared sensor split requires non-empty sensor metadata")
@@ -602,7 +606,9 @@ def parse_args(argv=None):
     parser.add_argument("--data-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, default=Path("training_output"))
     parser.add_argument(
-        "--split", choices=("class_random", "sensor"), default="class_random"
+        "--split",
+        choices=("class_random", "pre_hop_random", "sensor"),
+        default="class_random",
     )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--epochs", type=int, default=DEFAULT_EPOCHS)

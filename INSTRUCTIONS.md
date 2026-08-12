@@ -879,6 +879,23 @@ or hopping chunks from the same source file or detected transmission may land
 in training and test. Exact byte-identical duplicate source files are kept in
 one partition.
 
+## Train With A Pre-Hopping Segment Split
+
+Use `pre_hop_random` to stratify the detected-transmission time rows before
+considering their hopping chunks:
+
+```bash
+python3 train_pipeline.py \
+  --data-dir prepared_dataset \
+  --output-dir training_pre_hop_random \
+  --split pre_hop_random \
+  --device auto
+```
+
+All hopping chunks sharing the same source file, detected transmission, and
+time row remain in one partition. Adjacent time rows from the same transmission
+can still cross the split.
+
 ## Train With A Sensor Split
 
 The prepared manifest also contains a deterministic approximately 80/20
@@ -904,6 +921,13 @@ transmission-level averaging.
 For a two-epoch smoke training run:
 
 ```bash
+python3 train_pipeline.py \
+  --data-dir prepared_smoke \
+  --output-dir training_smoke_pre_hop_random \
+  --split pre_hop_random \
+  --smoke \
+  --device cpu
+
 python3 train_pipeline.py \
   --data-dir prepared_smoke \
   --output-dir training_smoke_random \

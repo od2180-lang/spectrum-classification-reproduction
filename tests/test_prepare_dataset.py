@@ -92,6 +92,33 @@ def test_random_split_is_segment_level_except_for_duplicate_sources():
         assert len(set(assignments[duplicates])) == 1
 
 
+def test_pre_hop_random_split_keeps_all_hops_together():
+    records = []
+    for label in preparation.LABELS:
+        for base_index in range(10):
+            for hop_index in range(3):
+                records.append(
+                    {
+                        "technology": label,
+                        "pre_hop_segment_id": f"{label}-base-{base_index}",
+                        "chunk_index": hop_index,
+                    }
+                )
+
+    assignments = preparation.pre_hop_random_split(records, seed=23)
+    for label in preparation.LABELS:
+        label_assignments = set()
+        for base_index in range(10):
+            indices = [
+                index
+                for index, record in enumerate(records)
+                if record["pre_hop_segment_id"] == f"{label}-base-{base_index}"
+            ]
+            assert len(set(assignments[indices])) == 1
+            label_assignments.update(assignments[indices])
+        assert label_assignments == {"train", "test"}
+
+
 def test_linked_duplicate_sensors_share_sensor_partition():
     records = _records()
     for record in records:
@@ -187,4 +214,10 @@ def test_preparation_writes_aligned_feature_and_segment_shapes(tmp_path, monkeyp
         class_rows = [row for row in segments if row["technology"] == label]
         assert len(class_rows) <= 4
         assert {row["random_split"] for row in class_rows} == {"train", "test"}
+        assert {row["pre_hop_random_split"] for row in class_rows} == {"train", "test"}
         assert {row["sensor_split"] for row in class_rows} == {"train", "test"}
+
+    by_base = {}
+    for row in segments:
+        by_base.setdefault(row["pre_hop_segment_id"], set()).add(row["pre_hop_random_split"])
+    assert all(len(values) == 1 for values in by_base.values())
